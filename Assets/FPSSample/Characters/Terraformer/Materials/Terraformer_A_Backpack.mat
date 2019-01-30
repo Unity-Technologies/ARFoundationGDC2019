@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Terraformer_A_Backpack
+  m_Shader: {fileID: 4800000, guid: 621088efccbe2384ea43f942aa5d0ca6, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_2AE36542:
+        m_Texture: {fileID: 2800000, guid: d286f669922af5d409a4ea7239ef3a8a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_3AD40D4A:
+        m_Texture: {fileID: 2800000, guid: 99d815439249dd04890d60179891a5bd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_5B4C9034:
+        m_Texture: {fileID: 2800000, guid: a05f6c12ee651ff4190f4c2c98c35e79, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_6B0CFFCD:
+        m_Texture: {fileID: 2800000, guid: 99d815439249dd04890d60179891a5bd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_801F08FD:
+        m_Texture: {fileID: 2800000, guid: a05f6c12ee651ff4190f4c2c98c35e79, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_D3998A:
+        m_Texture: {fileID: 2800000, guid: d286f669922af5d409a4ea7239ef3a8a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_F0A32339:
+        m_Texture: {fileID: 2800000, guid: 660240200b1660244a488e315785f790, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_1DE2E462: 0.3
+    m_Colors:
+    - Color_6689221D: {r: 0.6597539, g: 0.56143767, b: 0, a: 0}
+    - Color_67B3031F: {r: 0.43695584, g: 0.37839475, b: 0, a: 0}
+    - Color_991386ED: {r: 1, g: 1, b: 1, a: 0}
+    - Color_B4AF6907: {r: 7.5523415, g: 7.5523415, b: 7.5523415, a: 0}
