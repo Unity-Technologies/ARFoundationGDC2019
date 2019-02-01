@@ -5,12 +5,12 @@
     "com.unity.collab-proxy": "1.2.15",
     "com.unity.mathematics": "0.0.12-preview.19",
     "com.unity.package-manager-ui": "2.0.3",
-    "com.unity.purchasing": "2.0.3",
     "com.unity.render-pipelines.lightweight": "4.8.0-preview",
     "com.unity.textmeshpro": "1.3.0",
     "com.unity.xr.arcore": "1.0.0-preview.24",
     "com.unity.xr.arfoundation": "1.0.0-preview.22",
     "com.unity.xr.arkit": "1.0.0-preview.23",
+    "com.unity.xr.remoting": "0.0.1-preview.10",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
     "com.unity.modules.assetbundle": "1.0.0",
@@ -41,5 +41,6 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "registry": "https://staging-packages.unity.com"
 }
