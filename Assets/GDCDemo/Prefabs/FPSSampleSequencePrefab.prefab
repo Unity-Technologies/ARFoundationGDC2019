@@ -45,6 +45,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_Planet_C_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1910188618069761900, guid: 9285e0f85f6be9842b9d09714ce6d510,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1910188618069918536, guid: 9285e0f85f6be9842b9d09714ce6d510,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -114,11 +119,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.3218401
-      objectReference: {fileID: 0}
-    - target: {fileID: 1910188618069761900, guid: 9285e0f85f6be9842b9d09714ce6d510,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9285e0f85f6be9842b9d09714ce6d510, type: 3}
@@ -200,11 +200,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 1936f890d6dae47d29dfac5b6e0026b9, type: 2}
-    - target: {fileID: 461806413617352661, guid: 1927fdb66419e499eb29e5f01ac88604,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1927fdb66419e499eb29e5f01ac88604, type: 3}
 --- !u!4 &266496594445371153 stripped
