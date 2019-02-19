@@ -8,8 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Rock_Planet_C_Mat
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_ShaderKeywords: _NORMALMAP
+  m_Shader: {fileID: 4800000, guid: 5dfad15991adee2439587a3eb00fda9f, type: 3}
+  m_ShaderKeywords: BOOLEAN_449208CE_ON _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -19,6 +19,14 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_943DD856:
+        m_Texture: {fileID: 2800000, guid: 3a5e0e86828cb9d4181a734c37fe744e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_A464B0C3:
+        m_Texture: {fileID: 2800000, guid: 03dddd3bf68c93f43b39087625327650, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: 03dddd3bf68c93f43b39087625327650, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -44,6 +52,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Boolean_449208CE: 1
+    - Vector1_65430A0A: 0.38
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -63,6 +73,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_6776BBF3: {r: 1, g: 1, b: 1, a: 0}
     - _Color: {r: 0.588, g: 0.588, b: 0.588, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
