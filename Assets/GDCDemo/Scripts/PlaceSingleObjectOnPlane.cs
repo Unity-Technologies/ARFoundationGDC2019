@@ -33,6 +33,10 @@ public class PlaceSingleObjectOnPlane : MonoBehaviour
     public GameObject spawnedObject { get; private set; }
     
     public static event Action onPlacedObject;
+    
+    static List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
+    
+    ARSessionOrigin m_SessionOrigin;
 
     void Awake()
     {
@@ -70,7 +74,5 @@ public class PlaceSingleObjectOnPlane : MonoBehaviour
         }
     }
 
-    static List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
 
-    ARSessionOrigin m_SessionOrigin;
 }

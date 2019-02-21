@@ -25,6 +25,9 @@ public class LightEstimation : MonoBehaviour
     /// </summary>
     public Color? colorCorrection { get; private set; }
 
+    [SerializeField] int m_BrightnessMultiplier = 6;
+    [SerializeField] int m_ColorTempMultiplier = 2;
+
     void Awake ()
     {
         m_Light = GetComponent<Light>();
@@ -45,13 +48,13 @@ public class LightEstimation : MonoBehaviour
         if (args.lightEstimation.averageBrightness.HasValue)
         {
             brightness = args.lightEstimation.averageBrightness.Value;
-            m_Light.intensity = brightness.Value;
+            m_Light.intensity = (brightness.Value * m_BrightnessMultiplier);
         }
 
         if (args.lightEstimation.averageColorTemperature.HasValue)
         {
             colorTemperature = args.lightEstimation.averageColorTemperature.Value;
-            m_Light.colorTemperature = colorTemperature.Value;
+            m_Light.colorTemperature = (colorTemperature.Value * m_ColorTempMultiplier);
         }
         
         if (args.lightEstimation.colorCorrection.HasValue)
