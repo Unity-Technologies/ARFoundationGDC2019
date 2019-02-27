@@ -8118,10 +8118,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a143b931dfcbcb44a263bee3e0b6dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blendValue: -1.12
+  terraformerPBRObject: {fileID: 0}
+  terraformerHologramObject: {fileID: 0}
+  prefabRoot: {fileID: 0}
+  effectBlendSlider: 0
+  effectBlendCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  sampleCurveDuration: 0
+  editorInputKey: 0
+  effectTopPosition: 0
+  effectBottomPosition: 0
   effectMap: {fileID: 2800000, guid: 6642057120df9f344bb72459cb49349d, type: 3}
   effectMapTile: 1.95
   effectSpread: 1.36
+  edgeColor: {r: 0, g: 0, b: 0, a: 0}
+  edgeGap: 0
 --- !u!95 &1033
 Animator:
   serializedVersion: 3
@@ -9893,7 +9908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &953
 Transform:
   m_ObjectHideFlags: 0
@@ -12027,7 +12042,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1010
 Transform:
   m_ObjectHideFlags: 0
