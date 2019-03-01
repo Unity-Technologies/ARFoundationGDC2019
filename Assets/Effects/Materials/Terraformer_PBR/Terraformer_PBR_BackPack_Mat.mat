@@ -58,9 +58,10 @@ Material:
     m_Floats:
     - Boolean_30D7EEEE: 1
     - Vector1_1DE2E462: 0.1
+    - _AR_LightEmission: 1
     - _Effect_Blend: 0
     m_Colors:
-    - Color_6689221D: {r: 1, g: 0.8503307, b: 0, a: 0}
+    - Color_6689221D: {r: 0.1792453, g: 0.15253423, b: 0, a: 0}
     - Color_6876E018: {r: 0, g: 0.1441627, b: 3.059474, a: 0}
-    - Color_B4AF6907: {r: 1, g: 1, b: 1, a: 0}
+    - Color_B4AF6907: {r: 1.7411011, g: 1.7411011, b: 1.7411011, a: 0}
     - _Edge_Tint: {r: 0, g: 0.3801496, b: 8.675366, a: 0}

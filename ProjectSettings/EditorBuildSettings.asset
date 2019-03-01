@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/ARFoundationSamples/Scenes/CameraImage.unity
     guid: e769916924fd3814ab1d9474de816b22
+  - enabled: 0
+    path: Assets/ARFoundationSamples/Scenes/LightEstimation.unity
+    guid: 2f0cbc82480584c258f99f0d9e4ba302
   m_configObjects:
     com.unity.xr.arkit.PlayerSettings: {fileID: 11400000, guid: 2d5fb8e61571b4e3897f221189089fd6,
       type: 2}

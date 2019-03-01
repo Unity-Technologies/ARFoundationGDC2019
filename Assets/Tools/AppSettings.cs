@@ -23,7 +23,6 @@ using UnityEngine.Experimental.Rendering.LightweightPipeline;
         // Use this for initialization
         void Start()
         {
-            Application.targetFrameRate = 300;
 
             float res;
             

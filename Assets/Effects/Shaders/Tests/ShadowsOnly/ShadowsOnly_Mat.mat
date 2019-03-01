@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_RecieveShadow
+  m_Name: ShadowsOnly_Mat
   m_Shader: {fileID: 4800000, guid: bae4a2263306fe8408d6068c59c3cc69, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _SPECULAR_COLOR
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -33,26 +33,11 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_38739AA4: -0.17
-    - Vector1_45328C9: 43.1
-    - Vector1_7CA9B401: 1.02
-    - Vector1_9711A2C5: 9.07
-    - Vector1_BA4F4F3E: 0.57
-    - Vector1_BA918A6A: -215.7
-    - _Alpha: 0.5
     - _AlphaClip: 0
     - _Blend: 3
     - _BumpScale: 1
@@ -63,19 +48,15 @@ Material:
     - _Glossiness: 0.5
     - _GlossinessSource: 1
     - _GlossyReflections: 1
-    - _Metallic: 0
-    - _OcclusionStrength: 1
-    - _ReceiveShadows: -6.38
+    - _ReceiveShadows: 1
     - _Shininess: 0.5
     - _SmoothnessTextureChannel: 0
-    - _SpecSource: 1
+    - _SpecSource: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 2
     - _Surface: 1
-    - _WorkflowMode: 1
     - _ZWrite: 0
     m_Colors:
-    - Color_49428E97: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

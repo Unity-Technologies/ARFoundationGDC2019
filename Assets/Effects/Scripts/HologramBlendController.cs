@@ -52,8 +52,7 @@ public class HologramBlendController : MonoBehaviour
 
     void OnEnable()
     {
-        SetupShaderPropertyIDs();
-        
+        SetupShaderPropertyIDs(); 
     }
 
     void Start()
