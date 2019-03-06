@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.XR;
 using UnityEngine.Experimental.XR.Interaction;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 
 public class PlacementCircle : MonoBehaviour
@@ -10,6 +11,7 @@ public class PlacementCircle : MonoBehaviour
     bool m_OnPlane = false;
 
     [SerializeField] GameObject m_PlacementCircle;
+    [SerializeField] Toggle m_RockButton;
     
     static List<ARRaycastHit> k_Hits = new List<ARRaycastHit>();
 
@@ -36,25 +38,32 @@ public class PlacementCircle : MonoBehaviour
 
     void Update()
     {
-        if (m_ShowCircle)
+        if (m_RockButton.isOn)
         {
-            // calc center screen
-            if (m_PortraitMode != (Input.deviceOrientation == DeviceOrientation.Portrait ||
-                                   Input.deviceOrientation == DeviceOrientation.PortraitUpsideDown))
+            if (m_ShowCircle)
             {
-                m_PortraitMode = !m_PortraitMode;
-                m_ScreenCenter = GetCenterScreen();
-            }
+                // calc center screen
+                if (m_PortraitMode != (Input.deviceOrientation == DeviceOrientation.Portrait ||
+                                       Input.deviceOrientation == DeviceOrientation.PortraitUpsideDown))
+                {
+                    m_PortraitMode = !m_PortraitMode;
+                    m_ScreenCenter = GetCenterScreen();
+                }
 
-            if (m_SessionOrigin.Raycast(m_ScreenCenter, k_Hits, TrackableType.PlaneWithinPolygon))
-            {
-                m_PlacementCircle.SetActive(true);
-                m_CircleTransform.localPosition = k_Hits[0].pose.position;
+                if (m_SessionOrigin.Raycast(m_ScreenCenter, k_Hits, TrackableType.PlaneWithinPolygon))
+                {
+                    m_PlacementCircle.SetActive(true);
+                    m_CircleTransform.localPosition = k_Hits[0].pose.position;
+                }
+                else
+                {
+                    m_PlacementCircle.SetActive(false);
+                }
             }
-            else
-            {
-                m_PlacementCircle.SetActive(false);
-            }
+        }
+        else
+        {
+            m_PlacementCircle.SetActive(false);
         }
     }
 
