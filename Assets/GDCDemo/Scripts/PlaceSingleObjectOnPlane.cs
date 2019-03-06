@@ -26,6 +26,8 @@ public class PlaceSingleObjectOnPlane : MonoBehaviour
         get { return m_PlacedPrefab; }
         set { m_PlacedPrefab = value; }
     }
+
+    bool m_CanPlace = false;
     
     /// <summary>
     /// The object instantiated as a result of a successful raycast intersection with a plane.
@@ -45,33 +47,39 @@ public class PlaceSingleObjectOnPlane : MonoBehaviour
 
     void Update()
     {
-        if (Input.touchCount == 0)
-            return;
-
-        var touch = Input.GetTouch(0);
-
-        if (m_SessionOrigin.Raycast(touch.position, s_Hits, TrackableType.PlaneWithinPolygon))
+        if (m_CanPlace)
         {
-            // Raycast hits are sorted by distance, so the first one
-            // will be the closest hit.
-            var hitPose = s_Hits[0].pose;
-
-            if (spawnedObject == null)
+            if (Input.touchCount == 0)
+                return;
+    
+            var touch = Input.GetTouch(0);
+    
+            if (m_SessionOrigin.Raycast(touch.position, s_Hits, TrackableType.PlaneWithinPolygon))
             {
-                spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
-                
-                if (onPlacedObject != null)
+                // Raycast hits are sorted by distance, so the first one
+                // will be the closest hit.
+                var hitPose = s_Hits[0].pose;
+    
+                if (spawnedObject == null)
                 {
-                    onPlacedObject();
+                    spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
+    
+                    if (onPlacedObject != null)
+                    {
+                        onPlacedObject();
+                    }
+                }
+                else
+                {
+                    spawnedObject.transform.position = hitPose.position;
                 }
             }
-            else
-            {
-                spawnedObject.transform.position = hitPose.position;
-            }
-            
-            
         }
+    }
+
+    public void TogglePlacement()
+    {
+        m_CanPlace = !m_CanPlace;
     }
 
 
