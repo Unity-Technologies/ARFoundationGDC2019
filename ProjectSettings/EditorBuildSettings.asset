@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/GDCDemo/Scenes/DemoSceneGDC.unity
     guid: cc28ccf92e1af4a429e07e05233aa795
-  - enabled: 1
+  - enabled: 0
     path: Assets/Effects/Scenes/Scene_Dev_Timeline.unity
     guid: 005ffab42e3aa7748be044796adce7a7
   - enabled: 0
