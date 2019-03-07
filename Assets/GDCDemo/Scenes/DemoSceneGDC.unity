@@ -523,6 +523,7 @@ GameObject:
   - component: {fileID: 507549024}
   - component: {fileID: 507549023}
   - component: {fileID: 507549022}
+  - component: {fileID: 507549026}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -555,7 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c11494e9ace475f9dc92e2f907b42c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BrightnessMultiplier: 1
+  m_BrightnessMultiplier: 3
   m_ColorTempMultiplier: 3
 --- !u!108 &507549024
 Light:
@@ -609,6 +610,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 117.14099, y: 244.689, z: 60.673996}
+--- !u!114 &507549026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507549021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb02ea04db529ab4384a3951ec4582c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionalLight: {fileID: 507549024}
+  editorEmissionValue: 0.1
+  editorColorValue: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &523936132
 GameObject:
   m_ObjectHideFlags: 0
