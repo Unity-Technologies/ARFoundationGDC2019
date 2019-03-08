@@ -66,7 +66,7 @@ public class CameraTextureToShaderGraph : MonoBehaviour
 
         // Convert the image to format, flipping the image across the Y axis.
         // We can also get a sub rectangle, but we'll get the full image here.
-        var conversionParams = new CameraImageConversionParams(image, format, CameraImageTransformation.MirrorY);
+        var conversionParams = new CameraImageConversionParams(image, format, CameraImageTransformation.None);
 
         // Texture2D allows us write directly to the raw texture data
         // This allows us to do the conversion in-place without making any copies.
@@ -85,10 +85,38 @@ public class CameraTextureToShaderGraph : MonoBehaviour
         // Apply the updated texture data to our texture
         m_Texture.Apply();
 
-        Shader.SetGlobalTexture("_LightingTex", m_Texture);
+        
+
+        Shader.SetGlobalColor("_AR_LightColor", AverageColorFromTexture(m_Texture));
 
        
     }
 
     Texture2D m_Texture;
+
+    Color32 AverageColorFromTexture(Texture2D tex)
+{
+ 
+        Color32[] texColors = tex.GetPixels32();
+ 
+        int total = texColors.Length;
+ 
+        float r = 0;
+        float g = 0;
+        float b = 0;
+ 
+        for(int i = 0; i < total; i++)
+        {
+ 
+            r += texColors[i].r;
+ 
+            g += texColors[i].g;
+ 
+            b += texColors[i].b;
+ 
+        }
+ 
+        return new Color32((byte)(r / total) , (byte)(g / total) , (byte)(b / total) , 0);
+ 
+}
 }

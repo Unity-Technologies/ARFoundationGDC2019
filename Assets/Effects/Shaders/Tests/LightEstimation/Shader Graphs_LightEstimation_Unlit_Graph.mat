@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_LightEstimation_Graph
+  m_Name: Shader Graphs_LightEstimation_Unlit_Graph
   m_Shader: {fileID: 4800000, guid: 02ec5823b81aca246abdd0d83b22b98d, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4

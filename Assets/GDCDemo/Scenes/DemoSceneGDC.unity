@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 282840816}
   - component: {fileID: 282840817}
   - component: {fileID: 282840818}
+  - component: {fileID: 282840819}
   m_Layer: 0
   m_Name: AR Camera
   m_TagString: MainCamera
@@ -409,6 +410,20 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &282840819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282840810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff54f9a17b70c974798d47577e672e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageDownSampleFactor: 2
+  editorCameraTextureColor: {r: 1, g: 1, b: 1, a: 0}
 --- !u!1 &361371091
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,8 +632,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c11494e9ace475f9dc92e2f907b42c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BrightnessMultiplier: 3
-  m_ColorTempMultiplier: 3
+  m_BrightnessMultiplier: 1
+  m_ColorTempMultiplier: 1
+  m_ColorCorrectionMultiplier: 1
 --- !u!108 &507549024
 Light:
   m_ObjectHideFlags: 0
@@ -684,8 +700,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionalLight: {fileID: 507549024}
-  editorEmissionValue: 0.5
-  editorColorValue: {r: 0, g: 0, b: 0, a: 0}
+  editorEmissionValue: 0.2
+  editorColorValue: {r: 1, g: 0.4481132, b: 0.4481132, a: 0}
 --- !u!1 &523936132
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,7 +1486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc8ef2373454446db9a3304a49c6cfb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlacedPrefab: {fileID: 334, guid: f43e06ca81d7b464385511fe698f75dc, type: 3}
+  m_PlacedPrefab: {fileID: 417, guid: f43e06ca81d7b464385511fe698f75dc, type: 3}
   m_PlacementTransform: {fileID: 971362453}
   m_PlacementCircle: {fileID: 1335839540}
 --- !u!1 &1405370715
