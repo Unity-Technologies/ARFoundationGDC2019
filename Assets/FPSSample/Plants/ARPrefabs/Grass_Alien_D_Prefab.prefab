@@ -25,10 +25,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60374389675996889}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.04, y: 0.006, z: 0.168}
-  m_LocalScale: {x: 0.1506721, y: 0.15067215, z: 0.15067215}
+  m_LocalPosition: {x: 0.03999996, y: 0.006, z: 0.168}
+  m_LocalScale: {x: 0.1506721, y: 0.15067221, z: 0.15067221}
   m_Children: []
-  m_Father: {fileID: 5987140497329328106}
+  m_Father: {fileID: 3287070142757638756}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!212 &2586358127173759064
@@ -105,9 +105,9 @@ Transform:
   m_GameObject: {fileID: 799857532234413368}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -0.0071001053, y: -0.014, z: -0.1078}
-  m_LocalScale: {x: 0.1506721, y: 0.15067215, z: 0.15067215}
+  m_LocalScale: {x: 0.1506721, y: 0.15067221, z: 0.15067221}
   m_Children: []
-  m_Father: {fileID: 5987140497329328106}
+  m_Father: {fileID: 3287070142757638756}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!212 &5246680398635524434
@@ -184,9 +184,9 @@ Transform:
   m_GameObject: {fileID: 5841744239147766602}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -0.18499947, y: -0.014, z: 0.029}
-  m_LocalScale: {x: 0.1506721, y: 0.15067215, z: 0.15067215}
+  m_LocalScale: {x: 0.1506721, y: 0.15067221, z: 0.15067221}
   m_Children: []
-  m_Father: {fileID: 5987140497329328106}
+  m_Father: {fileID: 3287070142757638756}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!212 &7677000370563296561
@@ -248,6 +248,7 @@ GameObject:
   - component: {fileID: 5987140497329328106}
   - component: {fileID: 1532059018956773321}
   - component: {fileID: 6643891437209793827}
+  - component: {fileID: 1990221487}
   m_Layer: 0
   m_Name: Grass_Alien_D_Prefab
   m_TagString: Untagged
@@ -266,10 +267,7 @@ Transform:
   m_LocalPosition: {x: 9.62, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5987140497329328110}
-  - {fileID: 5026280072890386388}
-  - {fileID: 3851595133668576467}
-  - {fileID: 4921740206471778373}
+  - {fileID: 3287070142757638756}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -302,6 +300,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &1990221487
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5987140497329361866}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d24d9c8c7f3a7b042b3f416f3f93b114, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5987140497329361870
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +331,7 @@ GameObject:
   - component: {fileID: 5987140497328558028}
   - component: {fileID: 5987140497327426828}
   m_Layer: 0
-  m_Name: Geom_Grass_Alien_D_LOD01
+  m_Name: Geom_Grass_Alien_D_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -327,11 +344,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5987140497329361870}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5987140497329328106}
+  m_Father: {fileID: 3287070142757638756}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &5987140497328558028
@@ -341,7 +358,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5987140497329361870}
-  m_Mesh: {fileID: 4300006, guid: 7f370be91000591499cb7052f3c44c8b, type: 3}
+  m_Mesh: {fileID: 4300002, guid: 7f370be91000591499cb7052f3c44c8b, type: 3}
 --- !u!23 &5987140497327426828
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -379,3 +396,37 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &8317794038588885272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3287070142757638756}
+  m_Layer: 0
+  m_Name: Root_GrowAnimation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3287070142757638756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8317794038588885272}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5987140497329328110}
+  - {fileID: 5026280072890386388}
+  - {fileID: 3851595133668576467}
+  - {fileID: 4921740206471778373}
+  m_Father: {fileID: 5987140497329328106}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

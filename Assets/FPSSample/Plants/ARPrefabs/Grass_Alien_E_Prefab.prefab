@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 810}
   - component: {fileID: 839}
   - component: {fileID: 834}
+  - component: {fileID: 2064087248}
   m_Layer: 0
   m_Name: Grass_Alien_E_Prefab
   m_TagString: Untagged
@@ -29,10 +30,7 @@ Transform:
   m_LocalPosition: {x: 10.92, y: 0, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
-  - {fileID: 1317259969}
-  - {fileID: 3187074735654098370}
-  - {fileID: 7638083884676652888}
-  - {fileID: 8310735895788311008}
+  - {fileID: 1462305512322829870}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -65,6 +63,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &2064087248
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d24d9c8c7f3a7b042b3f416f3f93b114, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1317259967
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,9 +108,9 @@ Transform:
   m_GameObject: {fileID: 1317259967}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.10499954, y: -0.035, z: 0.040000003}
-  m_LocalScale: {x: 0.50663114, y: 0.50663143, z: 0.50663143}
+  m_LocalScale: {x: 0.50663114, y: 0.50663173, z: 0.50663173}
   m_Children: []
-  m_Father: {fileID: 810}
+  m_Father: {fileID: 1462305512322829870}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!212 &1317259968
@@ -144,6 +161,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2104258841803881681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1462305512322829870}
+  m_Layer: 0
+  m_Name: Root_GrowAnimation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1462305512322829870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104258841803881681}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1317259969}
+  - {fileID: 3187074735654098370}
+  - {fileID: 7638083884676652888}
+  - {fileID: 8310735895788311008}
+  m_Father: {fileID: 810}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3556932993860757146
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,9 +221,9 @@ Transform:
   m_GameObject: {fileID: 3556932993860757146}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -0.08500099, y: -0.035, z: -0.25}
-  m_LocalScale: {x: 0.28371343, y: 0.28371358, z: 0.28371358}
+  m_LocalScale: {x: 0.28371343, y: 0.28371373, z: 0.28371373}
   m_Children: []
-  m_Father: {fileID: 810}
+  m_Father: {fileID: 1462305512322829870}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!212 &8169434362532551363
@@ -252,7 +303,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 810}
+  m_Father: {fileID: 1462305512322829870}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8310735895791178182
@@ -326,9 +377,9 @@ Transform:
   m_GameObject: {fileID: 8951936419620701240}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -0.22000074, y: -0.035, z: 0.0275}
-  m_LocalScale: {x: 0.28371343, y: 0.28371358, z: 0.28371358}
+  m_LocalScale: {x: 0.28371343, y: 0.28371373, z: 0.28371373}
   m_Children: []
-  m_Father: {fileID: 810}
+  m_Father: {fileID: 1462305512322829870}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!212 &3641128755608456995
