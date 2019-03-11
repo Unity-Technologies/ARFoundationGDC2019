@@ -54,7 +54,7 @@ MonoBehaviour:
   terraformerPBRObject: {fileID: 594}
   terraformerHologramObject: {fileID: 419}
   prefabRoot: {fileID: 1091}
-  effectBlendSlider: 0
+  effectBlendSlider: 1
   effectBlendCurve:
     serializedVersion: 2
     m_Curve:
