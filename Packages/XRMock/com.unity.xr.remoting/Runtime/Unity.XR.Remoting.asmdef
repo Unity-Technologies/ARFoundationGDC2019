@@ -1,0 +1,17 @@
+{
+    "name": "Unity.XR.Remoting",
+    "references": [
+        "Unity.XR.Mock",
+        "Unity.XR.ARFoundation",
+        "Unity.RenderPipelines.Lightweight.Runtime",
+        "Unity.RenderPipelines.Core.Runtime"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

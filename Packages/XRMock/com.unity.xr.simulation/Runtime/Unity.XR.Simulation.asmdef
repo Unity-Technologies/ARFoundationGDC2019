@@ -1,0 +1,15 @@
+{
+    "name": "Unity.XR.Simulation",
+    "references": [
+        "Unity.XR.Mock",
+        "Unity.XR.ARExtensions"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor",
+        "macOSStandalone",
+        "WindowsStandalone64"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

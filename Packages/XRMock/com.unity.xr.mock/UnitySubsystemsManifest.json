@@ -1,0 +1,47 @@
+{
+  "name": "UnityXRMock",
+  "version": "0.0.1",
+  "libraryName": "UnityXRMock",
+  "cameras": [
+    {
+      "id": "UnityXRMock-Camera",
+      "providesAverageBrightness": true,
+      "providesAverageColorTemp": true,
+      "providesProjectionMatrix": true,
+      "providesDisplayMatrix": true,
+      "providesTimestamp": true
+    }
+  ],
+  "planes": [
+    {
+      "id": "UnityXRMock-Plane",
+      "supportsPlaneFinding": true
+    }
+  ],
+  "inputs": [
+    {
+      "id": "UnityXRMock-Input"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "UnityXRMock-Session"
+    }
+  ],
+  "referencePoints": [
+    {
+      "id": "UnityXRMock-ReferencePoint"
+    }
+  ],
+  "depths": [
+    {
+      "id": "UnityXRMock-Depth",
+      "supportsFeaturePoints": true
+    }
+  ],
+  "raycasts": [
+    {
+      "id": "UnityXRMock-Raycast"
+    }
+  ]
+}

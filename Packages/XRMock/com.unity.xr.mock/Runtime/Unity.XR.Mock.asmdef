@@ -1,0 +1,14 @@
+{
+    "name": "Unity.XR.Mock",
+    "references": [
+        "Unity.XR.ARExtensions"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor",
+        "macOSStandalone",
+        "WindowsStandalone64"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

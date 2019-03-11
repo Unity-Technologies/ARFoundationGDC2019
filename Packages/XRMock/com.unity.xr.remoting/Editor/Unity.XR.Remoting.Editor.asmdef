@@ -1,0 +1,21 @@
+{
+    "name": "Unity.XR.Remoting.Editor",
+    "references": [
+        "Unity.XR.Remoting",
+        "Unity.XR.ARFoundation",
+        "Unity.XR.Mock",
+        "Unity.RenderPipelines.Lightweight.Editor",
+        "Unity.RenderPipelines.Lightweight.Runtime",
+        "Unity.RenderPipelines.Core.Editor"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
