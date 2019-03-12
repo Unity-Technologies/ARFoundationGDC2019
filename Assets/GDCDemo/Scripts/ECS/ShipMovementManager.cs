@@ -29,9 +29,7 @@ public class ShipMovementManager : MonoBehaviour
     public int enemyShipCount = 1;
     public int enemyShipIncremement = 1;
 
-    FPS fps;
     int count;
-
 
     void Awake()
     {
@@ -47,8 +45,6 @@ public class ShipMovementManager : MonoBehaviour
 
     void Start()
     {
-        fps = GetComponent<FPS>();
-
         manager = World.Active.GetOrCreateManager<EntityManager>();
         AddShips(enemyShipCount);
     }
@@ -75,7 +71,6 @@ public class ShipMovementManager : MonoBehaviour
         entities.Dispose();
 
         count += amount;
-        //fps.SetElementCount(count);
     }
 }
 
