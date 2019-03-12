@@ -32,7 +32,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_D3998A:
-        m_Texture: {fileID: 2800000, guid: 4ce76c82900f5674bb223aacf143c833, type: 3}
+        m_Texture: {fileID: 2800000, guid: eaf02c1aaa8391346b71d25dac4ca8d9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_F0A32339:
@@ -63,5 +63,5 @@ Material:
     m_Colors:
     - Color_6689221D: {r: 0.1792453, g: 0.15253423, b: 0, a: 0}
     - Color_6876E018: {r: 0, g: 0.1441627, b: 3.059474, a: 0}
-    - Color_B4AF6907: {r: 2.297397, g: 2.297397, b: 2.297397, a: 0}
+    - Color_B4AF6907: {r: 1.1353015, g: 1.1353015, b: 1.1353015, a: 1}
     - _Edge_Tint: {r: 0, g: 0.3801496, b: 8.675366, a: 0}
