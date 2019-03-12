@@ -53,8 +53,8 @@ public class ShipMovementManager : MonoBehaviour
 
     void SpawnShips()
     {
-/*
-        var entityManager = World.Active.GetOrCreateManager<EntityManager>();
+
+        /*var entityManager = World.Active.GetOrCreateManager<EntityManager>();
         
         NativeArray<Entity> ships = new NativeArray<Entity>(ShipsToSpawn, Allocator.Temp);
         entityManager.CreateEntity(ShipArch, ships);
