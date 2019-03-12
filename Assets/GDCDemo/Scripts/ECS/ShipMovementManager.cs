@@ -1,108 +1,81 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using Unity.Collections;
 using Unity.Entities;
-using Unity.Transforms;
 using Unity.Mathematics;
-using Unity.Collections;
-using UnityEngine.UI;
+using Unity.Transforms;
+using UnityEngine;
 using Random = UnityEngine.Random;
-
 
 public class ShipMovementManager : MonoBehaviour
 {
+    #region GAME_MANAGER_STUFF
+
+    //Boilerplat game manager stuff that is the same in each example
+    public static ShipMovementManager GM;
+
+    [Header("Simulation Settings")]
+    public float topBound = 16.5f;
+    public float bottomBound = -13.5f;
+    public float leftBound = -23.5f;
+    public float rightBound = 23.5f;
+
+    [Header("Enemy Settings")]
+    public GameObject enemyShipPrefab;
+    public float enemySpeed = 1f;
+
+    public GameObject EnemyShip2;
+    public GameObject EnemyShip3;
+
+    [Header("Spawn Settings")]
+    public int enemyShipCount = 1;
+    public int enemyShipIncremement = 1;
+
+    FPS fps;
+    int count;
+
+
+    void Awake()
+    {
+        if (GM == null)
+            GM = this;
+        else if (GM != this)
+            Destroy(gameObject);
+    }
+    #endregion
+
+    EntityManager manager;
     
-    // debug text fields
-    public Text EntityTextDisplay;
-    private int numberOfShips = 0;
-    
-    public int ShipsToSpawn = 1000;
 
-    public Mesh shipMesh;
-    public Material shipMaterial;
-
-    public List<GameObject> ShipPrefabs;
-
-    public static EntityArchetype ShipArch;
-
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-    public static void Initialize()
+    void Start()
     {
-        var entityManager = World.Active.GetOrCreateManager<EntityManager>();
+        fps = GetComponent<FPS>();
 
-        ShipArch = entityManager.CreateArchetype(
-            typeof(Position), typeof(Rotation),
-            typeof(MeshRenderer)
-            
-            //typeof(MeshInstanceRenderer), typeof(TransformMatrix)
-        );
+        manager = World.Active.GetOrCreateManager<EntityManager>();
+        AddShips(enemyShipCount);
     }
 
-    void Start ()
+    void Update()
     {
-        SpawnShips();
+        if (Input.GetKeyDown("space"))
+            AddShips(enemyShipIncremement);
     }
-	
-    void Update ()
+
+    void AddShips(int amount)
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        NativeArray<Entity> entities = new NativeArray<Entity>(amount, Allocator.Temp);
+        manager.Instantiate(enemyShipPrefab, entities);
+
+        for (int i = 0; i < amount; i++)
         {
-            SpawnShips();
+            float xVal = UnityEngine.Random.Range(leftBound, rightBound);
+            float zVal = UnityEngine.Random.Range(0f, 10f);
+            manager.SetComponentData(entities[i], new Position { Value = new float3(xVal, Random.Range(-5, 5), topBound + zVal) });
+            manager.SetComponentData(entities[i], new Rotation { Value = new quaternion(0, 1, 0, 0) });
+            manager.SetComponentData(entities[i], new MovementData{Value = enemySpeed});
         }
-    }
+        entities.Dispose();
 
-    void SpawnShips()
-    {
-
-        /*var entityManager = World.Active.GetOrCreateManager<EntityManager>();
-        
-        NativeArray<Entity> ships = new NativeArray<Entity>(ShipsToSpawn, Allocator.Temp);
-        entityManager.CreateEntity(ShipArch, ships);
-*/
-
-        for (int i = 0; i < ShipsToSpawn; i++)
-        {
-            for (int j = 0; j < ShipPrefabs.Count; j++)
-            {
-                var entityManager = World.Active.GetOrCreateManager<EntityManager>();
-                Entity ship = entityManager.Instantiate(ShipPrefabs[j]);
-                entityManager.AddComponentData(ship, new Position {Value = RandomPosition()});
-                entityManager.AddComponentData(ship, new ShipMovementData {movementSpeed = RandomFallSpeed()});
-            }
-        }
-
-        /*
-        manager.SetComponentData(bullet, new Position { Value = gunBarrel.position });
-        manager.SetComponentData(bullet, new Rotation { Value = Quaternion.Euler(rotation) });
-        for (int i = 0; i < ShipsToSpawn; i++)
-        {
-            entityManager.SetComponentData(ships[i], new Position{ Value = RandomPosition()});
-            //entityManager.SetSharedComponentData(snowFlakes[i], new MeshInstanceRenderer{ mesh = SnowflakeMesh, material = SnowflakeMat});
-            entityManager.SetComponentData(ships[i], new Renderer{mesh = shipMesh, material = shipMaterial});
-            entityManager.AddComponentData(ships[i], new ShipMovementData{movementSpeed = RandomFallSpeed()});
-
-        }
-        ships.Dispose();
-*/
-        // update UI
-        numberOfShips += ShipsToSpawn;
-        EntityTextDisplay.text = numberOfShips.ToString();
-    }
-
-
-    // Random Value functions
-    float3 RandomPosition()
-    {
-        return new float3(Random.Range(0.1f, 1.0f), Random.Range(0.1f, 1.0f), Random.Range(0.1f, 1.0f));
-    }
-
-    float RandomFallSpeed()
-    {
-        return Random.Range(0.1f, 5.0f);
-    }
-
-    float RandomRotateSpeed()
-    {
-        return 1.0f;
+        count += amount;
+        //fps.SetElementCount(count);
     }
 }
+

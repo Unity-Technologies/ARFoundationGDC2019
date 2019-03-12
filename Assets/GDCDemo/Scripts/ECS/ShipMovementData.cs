@@ -1,9 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 using Unity.Entities;
 
-public struct ShipMovementData : IComponentData
+[Serializable]
+public struct MovementData : IComponentData
 {
-    public float movementSpeed;
+    public float Value;
 }
+
+public class ShipMovementData : ComponentDataWrapper<MovementData> {}

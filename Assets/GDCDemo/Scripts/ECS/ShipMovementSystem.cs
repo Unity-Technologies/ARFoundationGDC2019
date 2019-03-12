@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Unity.Collections;
+using Unity.Burst;
 using Unity.Entities;
 using UnityEngine;
 using Unity.Jobs;
@@ -8,23 +8,38 @@ using Unity.Transforms;
 
 public class ShipMovementSystem : JobComponentSystem
 {
-    public struct FlakeMoveJob : IJobProcessComponentData<Position, Rotation, ShipMovementData>
+    [BurstCompile]
+    struct MovementJob : IJobProcessComponentData<Position, Rotation, MovementData>
     {
-        public float DeltaTime;
-		
-        public void Execute(ref Position pos, ref Rotation rot, ref ShipMovementData data)
+        public float topBound;
+        public float bottomBound;
+        public float deltaTime;
+
+        public void Execute(ref Position position, [ReadOnly] ref Rotation rotation, [ReadOnly] ref MovementData speed)
         {
-            pos.Value.z += data.movementSpeed * DeltaTime;
-            //rot.Value = math.mul(math.normalize(rot.Value), math.axisAngle(math.up(), data.RotateSpeedValue * DeltaTime));
+            float3 value = position.Value;
+
+            value += deltaTime * speed.Value * math.forward(rotation.Value);
+
+            if (value.z < bottomBound)
+                value.z = topBound;
+
+            position.Value = value;
         }
     }
 
     protected override JobHandle OnUpdate(JobHandle inputDeps)
     {
-        var job = new FlakeMoveJob()
+        MovementJob moveJob = new MovementJob
         {
-            DeltaTime = Time.deltaTime
+            topBound = ShipMovementManager.GM.topBound,
+            bottomBound = ShipMovementManager.GM.bottomBound,
+            deltaTime = Time.deltaTime
         };
-        return job.Schedule(this, inputDeps);
+      
+        JobHandle moveHandle = moveJob.Schedule(this, inputDeps);
+
+        return moveHandle;
     }
 }
+
