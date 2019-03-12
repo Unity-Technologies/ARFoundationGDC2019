@@ -31,6 +31,8 @@ public class ShipMovementManager : MonoBehaviour
 
     int count;
 
+    int spawnedShip = 0;
+
     void Awake()
     {
         if (GM == null)
@@ -46,19 +48,22 @@ public class ShipMovementManager : MonoBehaviour
     void Start()
     {
         manager = World.Active.GetOrCreateManager<EntityManager>();
-        AddShips(enemyShipCount);
+        AddShips(enemyShipCount, enemyShipPrefab);
+        AddShips(enemyShipCount, EnemyShip2);
+        AddShips(enemyShipCount, EnemyShip3);
     }
 
     void Update()
     {
         if (Input.GetKeyDown("space"))
-            AddShips(enemyShipIncremement);
+            AddShips(enemyShipIncremement, EnemyShip3);
     }
 
-    void AddShips(int amount)
+    void AddShips(int amount, GameObject shipPrefab)
     {
         NativeArray<Entity> entities = new NativeArray<Entity>(amount, Allocator.Temp);
-        manager.Instantiate(enemyShipPrefab, entities);
+
+        manager.Instantiate(shipPrefab, entities);
 
         for (int i = 0; i < amount; i++)
         {
@@ -67,6 +72,13 @@ public class ShipMovementManager : MonoBehaviour
             manager.SetComponentData(entities[i], new Position { Value = new float3(xVal, Random.Range(-5, 5), topBound + zVal) });
             manager.SetComponentData(entities[i], new Rotation { Value = new quaternion(0, 1, 0, 0) });
             manager.SetComponentData(entities[i], new MovementData{Value = enemySpeed});
+
+            spawnedShip++;
+            if (spawnedShip > 2)
+            {
+                spawnedShip = 0;
+            }
+            
         }
         entities.Dispose();
 
