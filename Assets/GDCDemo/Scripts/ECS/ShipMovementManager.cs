@@ -18,6 +18,9 @@ public class ShipMovementManager : MonoBehaviour
     public float leftBound = -23.5f;
     public float rightBound = 23.5f;
 
+    public float WorldResetBottom;
+    public float WorldResetTop;
+
     [Header("Enemy Settings")]
     public GameObject enemyShipPrefab;
     public float enemySpeed = 1f;
@@ -43,14 +46,21 @@ public class ShipMovementManager : MonoBehaviour
     #endregion
 
     EntityManager manager;
+
+    [SerializeField] Transform RootObject;
     
 
     void Start()
     {
+        //bottomBound = RootObject.position.z - bottomBound;
+        //topBound = RootObject.position.z + topBound;
+        WorldResetTop = RootObject.localPosition.z + topBound;
+        WorldResetBottom = RootObject.localPosition.z + bottomBound;
         manager = World.Active.GetOrCreateManager<EntityManager>();
         AddShips(enemyShipCount, enemyShipPrefab);
         AddShips(enemyShipCount, EnemyShip2);
         AddShips(enemyShipCount, EnemyShip3);
+        
     }
 
     void Update()
@@ -67,10 +77,12 @@ public class ShipMovementManager : MonoBehaviour
 
         for (int i = 0; i < amount; i++)
         {
-            float xVal = UnityEngine.Random.Range(leftBound, rightBound);
-            float zVal = UnityEngine.Random.Range(0f, 10f);
-            manager.SetComponentData(entities[i], new Position { Value = new float3(xVal, Random.Range(-5, 5), topBound + zVal) });
-            manager.SetComponentData(entities[i], new Rotation { Value = new quaternion(0, 1, 0, 0) });
+            float xVal = UnityEngine.Random.Range(leftBound, rightBound) + RootObject.localPosition.x;
+            float yVal = UnityEngine.Random.Range(-5.0f, 5.0f) + RootObject.localPosition.y;
+            float zVal = (RootObject.position.z + bottomBound) + Random.Range(-10.0f, 10.0f);
+            
+            manager.SetComponentData(entities[i], new Position { Value = new float3(xVal, yVal, zVal) });
+            manager.SetComponentData(entities[i], new Rotation { Value = new quaternion(RootObject.rotation.x, RootObject.rotation.y, RootObject.rotation.z, RootObject.rotation.w) });
             manager.SetComponentData(entities[i], new MovementData{Value = enemySpeed});
 
             spawnedShip++;
