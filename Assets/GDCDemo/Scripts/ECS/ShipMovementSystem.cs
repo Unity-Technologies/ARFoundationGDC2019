@@ -21,8 +21,8 @@ public class ShipMovementSystem : JobComponentSystem
 
             value += deltaTime * speed.Value * math.forward(rotation.Value);
 
-            if (value.z > topBound)
-                value.z = bottomBound;
+            if (value.z < bottomBound)
+                value.z = topBound;
 
             position.Value = value;
         }

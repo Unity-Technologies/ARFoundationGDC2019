@@ -26,7 +26,7 @@ public class PlaceObjectAtTransform : MonoBehaviour
 
     bool m_CanPlace = false;
     bool m_PlacedObject = false;
-    GameObject m_SpanwedObject;
+    [SerializeField] GameObject m_SpanwedObject;
     
     public static event Action onPlacedObject;
     
@@ -51,7 +51,8 @@ public class PlaceObjectAtTransform : MonoBehaviour
             if (!m_PlacedObject)
             {
                 m_PlacedObject = true;
-                m_SpanwedObject = Instantiate(m_PlacedPrefab, m_PlacementTransform.position, Quaternion.identity);
+                //m_SpanwedObject = Instantiate(m_PlacedPrefab, m_PlacementTransform.position, Quaternion.identity);
+                m_SpanwedObject.transform.position = m_PlacementTransform.position;
 
                 if (onPlacedObject != null)
                 {

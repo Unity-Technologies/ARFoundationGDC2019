@@ -90,7 +90,7 @@ public class HologramBlendController : MonoBehaviour
         } else {
 
             //Playmode Behaviour
-
+/*
             if(canBlend == true)
             {
                 if(currentlyBlending == false)
@@ -114,10 +114,36 @@ public class HologramBlendController : MonoBehaviour
 
                 }
             }
+            */
         }
         
         SetGlobalShaderValues();
 
+    }
+
+    public void Transition()
+    {
+        if(canBlend == true)
+        {
+            if(currentlyBlending == false)
+            {                    
+                for (int i = 0; i < Input.touchCount; ++i)
+                {
+                    //if (Input.GetTouch(i).phase == TouchPhase.Began)
+                    {
+                        EffectBlendStart();
+                    }
+                }
+                
+
+                if(Input.GetKeyDown(editorInputKey))
+                {
+                    EffectBlendStart();
+                }
+                    
+
+            }
+        }
     }
 
     //Blend Direction

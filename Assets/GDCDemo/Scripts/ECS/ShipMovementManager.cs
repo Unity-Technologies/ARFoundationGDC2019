@@ -54,13 +54,28 @@ public class ShipMovementManager : MonoBehaviour
     {
         //bottomBound = RootObject.position.z - bottomBound;
         //topBound = RootObject.position.z + topBound;
-        WorldResetTop = RootObject.localPosition.z + topBound;
-        WorldResetBottom = RootObject.localPosition.z + bottomBound;
+        //WorldResetTop = RootObject.position.z + topBound;
+        //WorldResetBottom = RootObject.position.z + bottomBound;
+        
+        Debug.Log("World reset top "+WorldResetTop);
+        Debug.Log("World bottom "+WorldResetBottom);
         manager = World.Active.GetOrCreateManager<EntityManager>();
+        /*
         AddShips(enemyShipCount, enemyShipPrefab);
         AddShips(enemyShipCount, EnemyShip2);
         AddShips(enemyShipCount, EnemyShip3);
+        */
         
+    }
+
+    public void SpawnShips()
+    {
+        WorldResetTop = RootObject.position.z + topBound;
+        WorldResetBottom = RootObject.position.z + bottomBound;
+        Debug.Log("in here");
+        AddShips(enemyShipCount, enemyShipPrefab);
+        AddShips(enemyShipCount, EnemyShip2);
+        AddShips(enemyShipCount, EnemyShip3);
     }
 
     void Update()
@@ -77,9 +92,9 @@ public class ShipMovementManager : MonoBehaviour
 
         for (int i = 0; i < amount; i++)
         {
-            float xVal = UnityEngine.Random.Range(leftBound, rightBound) + RootObject.localPosition.x;
-            float yVal = UnityEngine.Random.Range(-5.0f, 5.0f) + RootObject.localPosition.y;
-            float zVal = (RootObject.position.z + bottomBound) + Random.Range(-10.0f, 10.0f);
+            float xVal = UnityEngine.Random.Range(leftBound, rightBound) + RootObject.position.x;
+            float yVal = UnityEngine.Random.Range(-5.0f, 5.0f) + RootObject.position.y;
+            float zVal = (RootObject.position.z) + Random.Range(bottomBound, topBound);
             
             manager.SetComponentData(entities[i], new Position { Value = new float3(xVal, yVal, zVal) });
             manager.SetComponentData(entities[i], new Rotation { Value = new quaternion(RootObject.rotation.x, RootObject.rotation.y, RootObject.rotation.z, RootObject.rotation.w) });
