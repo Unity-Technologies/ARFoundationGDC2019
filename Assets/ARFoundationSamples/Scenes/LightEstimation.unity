@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -806,6 +806,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c11494e9ace475f9dc92e2f907b42c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_BrightnessMultiplier: 6
+  m_ColorTempMultiplier: 2
 --- !u!114 &1015722069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -818,9 +820,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 079fa7fb0f02c4bd28860dd22bf8f5a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BrightnessText: {fileID: 0}
-  m_ColorTemperatureText: {fileID: 0}
-  m_ColorCorrectionText: {fileID: 0}
+  m_BrightnessText: {fileID: 1779915677}
+  m_ColorTemperatureText: {fileID: 652819438}
+  m_ColorCorrectionText: {fileID: 390549478}
 --- !u!1 &1335839533
 GameObject:
   m_ObjectHideFlags: 0

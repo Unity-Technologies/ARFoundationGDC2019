@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/ARFoundationSamples/Scenes/LightEstimation.unity
     guid: 2f0cbc82480584c258f99f0d9e4ba302
+  - enabled: 0
+    path: Assets/Effects/Scenes/Scene_Dev_LightEstimation.unity
+    guid: ac0fce6b35caff24cb67b7609dd8b3cd
   m_configObjects:
     com.unity.xr.arkit.PlayerSettings: {fileID: 11400000, guid: 2d5fb8e61571b4e3897f221189089fd6,
       type: 2}

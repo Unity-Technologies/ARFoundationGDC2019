@@ -27,6 +27,7 @@ public class LightEstimation : MonoBehaviour
 
     [SerializeField] int m_BrightnessMultiplier = 6;
     [SerializeField] int m_ColorTempMultiplier = 2;
+    [SerializeField] int m_ColorCorrectionMultiplier = 2;
 
     void Awake ()
     {
@@ -60,7 +61,7 @@ public class LightEstimation : MonoBehaviour
         if (args.lightEstimation.colorCorrection.HasValue)
         {
             colorCorrection = args.lightEstimation.colorCorrection.Value;
-            m_Light.color = colorCorrection.Value;
+            m_Light.color = (colorCorrection.Value * m_ColorCorrectionMultiplier);
         }
     }
 
