@@ -121,7 +121,7 @@ public class HologramBlendController : MonoBehaviour
 
     }
 
-    public void Transition()
+    public void TransitionToggle()
     {
         if(canBlend == true)
         {
