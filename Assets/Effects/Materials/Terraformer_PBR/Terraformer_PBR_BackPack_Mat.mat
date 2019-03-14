@@ -58,7 +58,7 @@ Material:
     m_Floats:
     - Boolean_30D7EEEE: 1
     - Vector1_1DE2E462: 0.1
-    - Vector1_61624E92: 0.5
+    - Vector1_61624E92: 0.4
     - _AR_LightEmission: 1
     - _Effect_Blend: 0
     m_Colors:
