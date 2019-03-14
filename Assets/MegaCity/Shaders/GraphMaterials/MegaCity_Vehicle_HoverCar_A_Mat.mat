@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MegaCity_Vehicle_HoverBus_A_Mat
+  m_Name: MegaCity_Vehicle_HoverCar_A_Mat
   m_Shader: {fileID: 4800000, guid: 6ebc0e2f6a0755c418f017e1ac9007a7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,19 +20,19 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_3FAC8B73:
-        m_Texture: {fileID: 2800000, guid: cb427c5e27af6e24292316a981a31b44, type: 3}
+        m_Texture: {fileID: 2800000, guid: 148f1bddc7518ef40b6ae1ea0422de0c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_6121D01F:
-        m_Texture: {fileID: 2800000, guid: e41d1b208e0673d4c92eb0cbbbac306a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6f312515b4c6b4a4ba0c9a1bcc042f0d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_A19BA437:
-        m_Texture: {fileID: 2800000, guid: b3cac092c23cca64299ec43010a0e43c, type: 3}
+        m_Texture: {fileID: 2800000, guid: aa15028350cc3b048bc758bb2590772b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_D08A401E:
-        m_Texture: {fileID: 2800000, guid: f439c03318707534da7bc316dcc27c57, type: 3}
+        m_Texture: {fileID: 2800000, guid: 27d0b7e2ccbcfa74ea1e4e4af75e1295, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -60,7 +60,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_AB230E16: 1
+    - Vector1_AB230E16: 10
+    - Vector1_B54C5DB7: 0.21
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
