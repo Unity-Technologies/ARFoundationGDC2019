@@ -123,6 +123,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vehicle_HoverCar_A
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ea631246c133fc74894204700d7023cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: ea631246c133fc74894204700d7023cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: ea631246c133fc74894204700d7023cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: ea631246c133fc74894204700d7023cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: ea631246c133fc74894204700d7023cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: ea631246c133fc74894204700d7023cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: ea631246c133fc74894204700d7023cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.09
@@ -167,6 +191,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: ea631246c133fc74894204700d7023cd, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: ea631246c133fc74894204700d7023cd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 418b98357af0a8148be45d761778ee5c, type: 2}
+    - target: {fileID: 2300000, guid: ea631246c133fc74894204700d7023cd, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 418b98357af0a8148be45d761778ee5c, type: 2}
+    - target: {fileID: 2300000, guid: ea631246c133fc74894204700d7023cd, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 418b98357af0a8148be45d761778ee5c, type: 2}
+    - target: {fileID: 20500000, guid: ea631246c133fc74894204700d7023cd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea631246c133fc74894204700d7023cd, type: 3}
 --- !u!1001 &1609951665
@@ -179,6 +223,30 @@ PrefabInstance:
     - target: {fileID: 100014, guid: 94c05674136f45d489646b184ebad4a8, type: 3}
       propertyPath: m_Name
       value: Vehicle_HoverCar_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 94c05674136f45d489646b184ebad4a8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 94c05674136f45d489646b184ebad4a8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 94c05674136f45d489646b184ebad4a8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 94c05674136f45d489646b184ebad4a8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 94c05674136f45d489646b184ebad4a8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 94c05674136f45d489646b184ebad4a8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: 94c05674136f45d489646b184ebad4a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -224,6 +292,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 94c05674136f45d489646b184ebad4a8, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 94c05674136f45d489646b184ebad4a8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0943da0fbbb63f44fb8a11bb1a9d2b76, type: 2}
+    - target: {fileID: 2300000, guid: 94c05674136f45d489646b184ebad4a8, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0943da0fbbb63f44fb8a11bb1a9d2b76, type: 2}
+    - target: {fileID: 2300000, guid: 94c05674136f45d489646b184ebad4a8, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0943da0fbbb63f44fb8a11bb1a9d2b76, type: 2}
+    - target: {fileID: 20500000, guid: 94c05674136f45d489646b184ebad4a8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c05674136f45d489646b184ebad4a8, type: 3}
 --- !u!1001 &1634893242
@@ -236,6 +324,30 @@ PrefabInstance:
     - target: {fileID: 100014, guid: 47556828b20b86d428cfe1fea96e738b, type: 3}
       propertyPath: m_Name
       value: Vehicle_HoverCar_C
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 47556828b20b86d428cfe1fea96e738b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 47556828b20b86d428cfe1fea96e738b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 47556828b20b86d428cfe1fea96e738b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 47556828b20b86d428cfe1fea96e738b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 47556828b20b86d428cfe1fea96e738b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 47556828b20b86d428cfe1fea96e738b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: 47556828b20b86d428cfe1fea96e738b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -281,6 +393,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 47556828b20b86d428cfe1fea96e738b, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 47556828b20b86d428cfe1fea96e738b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3ab44cd07633e6a47a881824aa616eee, type: 2}
+    - target: {fileID: 2300000, guid: 47556828b20b86d428cfe1fea96e738b, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 192c6cd6c595eee489ad8552a98cb088, type: 2}
+    - target: {fileID: 2300000, guid: 47556828b20b86d428cfe1fea96e738b, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 192c6cd6c595eee489ad8552a98cb088, type: 2}
+    - target: {fileID: 20500000, guid: 47556828b20b86d428cfe1fea96e738b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47556828b20b86d428cfe1fea96e738b, type: 3}
 --- !u!1001 &1712505449
@@ -293,6 +425,30 @@ PrefabInstance:
     - target: {fileID: 100014, guid: 898172c971870554199a349ff9d2ee18, type: 3}
       propertyPath: m_Name
       value: Vehicle_HoverTruck_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 898172c971870554199a349ff9d2ee18, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 898172c971870554199a349ff9d2ee18, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 898172c971870554199a349ff9d2ee18, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 898172c971870554199a349ff9d2ee18, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 898172c971870554199a349ff9d2ee18, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 898172c971870554199a349ff9d2ee18, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: 898172c971870554199a349ff9d2ee18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -338,6 +494,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 898172c971870554199a349ff9d2ee18, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 898172c971870554199a349ff9d2ee18, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d6a62ea768287f14197a60186070f03b, type: 2}
+    - target: {fileID: 2300000, guid: 898172c971870554199a349ff9d2ee18, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 192c6cd6c595eee489ad8552a98cb088, type: 2}
+    - target: {fileID: 2300000, guid: 898172c971870554199a349ff9d2ee18, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 192c6cd6c595eee489ad8552a98cb088, type: 2}
+    - target: {fileID: 20500000, guid: 898172c971870554199a349ff9d2ee18, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 898172c971870554199a349ff9d2ee18, type: 3}
 --- !u!1001 &1929483119
@@ -350,6 +526,30 @@ PrefabInstance:
     - target: {fileID: 100014, guid: bf794e8a08889654e9527228b07749d8, type: 3}
       propertyPath: m_Name
       value: Vehicle_HoverBus_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: bf794e8a08889654e9527228b07749d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: bf794e8a08889654e9527228b07749d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: bf794e8a08889654e9527228b07749d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: bf794e8a08889654e9527228b07749d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: bf794e8a08889654e9527228b07749d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: bf794e8a08889654e9527228b07749d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: bf794e8a08889654e9527228b07749d8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -395,6 +595,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: bf794e8a08889654e9527228b07749d8, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: bf794e8a08889654e9527228b07749d8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 320b9ad9a54cee94f9aec7e1756f728c, type: 2}
+    - target: {fileID: 2300000, guid: bf794e8a08889654e9527228b07749d8, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 192c6cd6c595eee489ad8552a98cb088, type: 2}
+    - target: {fileID: 2300000, guid: bf794e8a08889654e9527228b07749d8, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 192c6cd6c595eee489ad8552a98cb088, type: 2}
+    - target: {fileID: 20500000, guid: bf794e8a08889654e9527228b07749d8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf794e8a08889654e9527228b07749d8, type: 3}
 --- !u!1001 &2025137810
@@ -411,6 +631,30 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 686d60095a2f90e419770a24bdc68a19, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 686d60095a2f90e419770a24bdc68a19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 686d60095a2f90e419770a24bdc68a19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 686d60095a2f90e419770a24bdc68a19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 686d60095a2f90e419770a24bdc68a19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 686d60095a2f90e419770a24bdc68a19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 686d60095a2f90e419770a24bdc68a19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: 686d60095a2f90e419770a24bdc68a19, type: 3}
       propertyPath: m_LocalPosition.x
@@ -454,6 +698,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: 686d60095a2f90e419770a24bdc68a19, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 686d60095a2f90e419770a24bdc68a19, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 686d60095a2f90e419770a24bdc68a19, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 686d60095a2f90e419770a24bdc68a19, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 192c6cd6c595eee489ad8552a98cb088, type: 2}
+    - target: {fileID: 2300000, guid: 686d60095a2f90e419770a24bdc68a19, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: fb082e8590ad5784388b2081a6252a73, type: 2}
+    - target: {fileID: 2300000, guid: 686d60095a2f90e419770a24bdc68a19, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 679bf5b5f3fca1944a5bbc28fcd2d60b, type: 2}
+    - target: {fileID: 20500000, guid: 686d60095a2f90e419770a24bdc68a19, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
