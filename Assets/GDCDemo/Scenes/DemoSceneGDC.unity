@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -206,12 +206,12 @@ GameObject:
   - component: {fileID: 282840814}
   - component: {fileID: 282840813}
   - component: {fileID: 282840811}
+  - component: {fileID: 282840818}
+  - component: {fileID: 282840820}
   - component: {fileID: 282840815}
   - component: {fileID: 282840812}
   - component: {fileID: 282840816}
   - component: {fileID: 282840817}
-  - component: {fileID: 282840818}
-  - component: {fileID: 282840820}
   m_Layer: 0
   m_Name: AR Camera
   m_TagString: MainCamera
@@ -1706,6 +1706,7 @@ MonoBehaviour:
   m_PlacedPrefab: {fileID: 420, guid: f43e06ca81d7b464385511fe698f75dc, type: 3}
   m_PlacementTransform: {fileID: 971362453}
   m_PlacementCircle: {fileID: 1335839540}
+  m_SpanwedObject: {fileID: 0}
 --- !u!1 &1405370715
 GameObject:
   m_ObjectHideFlags: 0

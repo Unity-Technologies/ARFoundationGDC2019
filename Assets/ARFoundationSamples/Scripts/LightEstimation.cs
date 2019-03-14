@@ -46,6 +46,7 @@ public class LightEstimation : MonoBehaviour
 
     void FrameChanged(ARCameraFrameEventArgs args)
     {
+        Debug.Log("Frame changed "+args.lightEstimation.averageBrightness);
         if (args.lightEstimation.averageBrightness.HasValue)
         {
             brightness = args.lightEstimation.averageBrightness.Value;
