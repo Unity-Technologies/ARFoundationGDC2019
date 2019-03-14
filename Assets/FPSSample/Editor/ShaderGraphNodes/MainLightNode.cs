@@ -34,6 +34,7 @@ public class MainLightNode : CodeFunctionNode
         Direction = Vector3.zero;
         Color = Vector3.one;
         ShadowAttenuation = new Vector1();
+
         if (!isPreview)
         {
             return Shader;
@@ -48,10 +49,12 @@ public class MainLightNode : CodeFunctionNode
         Direction = light.direction;
         Color = light.color;
         ShadowAttenuation = light.shadowAttenuation;
+        
     }";
     public static string PreviewShader = @"{
         Direction = float3(-0.5, 0.5, -0.5);
         Color = float3(1, 1, 1);
         ShadowAttenuation = 0.4;
+       
     }";
 }

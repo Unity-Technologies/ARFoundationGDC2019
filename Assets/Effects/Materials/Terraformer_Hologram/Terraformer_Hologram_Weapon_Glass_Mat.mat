@@ -122,7 +122,7 @@ Material:
     - Vector1_12444818: 0
     - Vector1_1B512F48: -14.87
     - Vector1_1DE2E462: 0
-    - Vector1_253059FD: 0.4
+    - Vector1_253059FD: 0.2
     - Vector1_37386914: 16.94
     - Vector1_44BC6B2D: 6.51
     - Vector1_6DFFE58C: 0.1
@@ -130,7 +130,7 @@ Material:
     - Vector1_8AF2A848: 0
     - Vector1_8BF0B355: 0.831
     - Vector1_B010950D: 0.7
-    - Vector1_C5293803: 0.02
+    - Vector1_C5293803: 0.05
     - Vector1_F4560A4: 6.02
     - _AlphaClip: 0
     - _Blend: 0
@@ -157,7 +157,7 @@ Material:
     - Color_F248DCE0: {r: 0.555222, g: 0.7966229, b: 0.9221513, a: 0}
     - Vector2_62D3B8CB: {r: 2, g: 2, b: 0, a: 0}
     - Vector2_E9E08FC9: {r: 0, g: 0.1, b: 0, a: 0}
-    - Vector3_ECB38DE3: {r: 0.04, g: 0.1, b: -0.1, a: 0}
+    - Vector3_ECB38DE3: {r: 0.02, g: 0.02, b: 0.01, a: 0}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}

@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_4764C29D:
-        m_Texture: {fileID: 2800000, guid: 85404d77fdddbb14784bc43e8edee0a9, type: 3}
+        m_Texture: {fileID: 2800000, guid: f55ce7f805f1e0e45a7cd10083f7ffc7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_6B0CFFCD:
@@ -32,7 +32,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_D3998A:
-        m_Texture: {fileID: 2800000, guid: 0cd9590e62fd7c9499ab097397e3bcee, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9282fb4107e5df64fac4c5ced6403c17, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_F0A32339:
@@ -58,10 +58,11 @@ Material:
     m_Floats:
     - Boolean_30D7EEEE: 1
     - Vector1_1DE2E462: 0.1
+    - Vector1_61624E92: 0.4
     - _AR_LightEmission: 1
     - _Effect_Blend: 0
     m_Colors:
     - Color_6689221D: {r: 0.1792453, g: 0.15253423, b: 0, a: 0}
     - Color_6876E018: {r: 0, g: 0.1441627, b: 3.059474, a: 0}
-    - Color_B4AF6907: {r: 1.4980392, g: 1.4980392, b: 1.4980392, a: 0}
+    - Color_B4AF6907: {r: 1.6055588, g: 1.6055588, b: 1.6055588, a: 1}
     - _Edge_Tint: {r: 0, g: 0.3801496, b: 8.675366, a: 0}

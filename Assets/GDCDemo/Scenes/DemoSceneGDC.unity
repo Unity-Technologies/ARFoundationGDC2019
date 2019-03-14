@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17682564, g: 0.22134253, b: 0.30363294, a: 1}
+  m_IndirectSpecularColor: {r: 0.17682564, g: 0.22134283, b: 0.3036332, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1284,6 +1284,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903967050}
   m_CullTransparentMesh: 0
+--- !u!1001 &965398591
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 565086328913322470, guid: 4cab5cc339a0b404088bf091de7425a0,
+        type: 3}
+      propertyPath: m_Name
+      value: Prefab_Terraformer
+      objectReference: {fileID: 0}
+    - target: {fileID: 565086328913322465, guid: 4cab5cc339a0b404088bf091de7425a0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 565086328913322465, guid: 4cab5cc339a0b404088bf091de7425a0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 565086328913322465, guid: 4cab5cc339a0b404088bf091de7425a0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 565086328913322465, guid: 4cab5cc339a0b404088bf091de7425a0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 565086328913322465, guid: 4cab5cc339a0b404088bf091de7425a0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 565086328913322465, guid: 4cab5cc339a0b404088bf091de7425a0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 565086328913322465, guid: 4cab5cc339a0b404088bf091de7425a0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 565086328913322465, guid: 4cab5cc339a0b404088bf091de7425a0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 565086328913322465, guid: 4cab5cc339a0b404088bf091de7425a0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 565086328913322465, guid: 4cab5cc339a0b404088bf091de7425a0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 565086328913322465, guid: 4cab5cc339a0b404088bf091de7425a0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4cab5cc339a0b404088bf091de7425a0, type: 3}
 --- !u!1 &971362450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1436,29 +1505,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
   fpsText: {fileID: 1992983442}
   deltaTime: 0
 --- !u!1 &1285467404
@@ -2298,6 +2355,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Timeline_CharacterSequenceMegaCity
       objectReference: {fileID: 0}
+    - target: {fileID: 1441, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+      propertyPath: effectBlendSlider
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 839, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
       propertyPath: m_LocalPosition.x
       value: 100
@@ -2855,7 +2916,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.193}
-  m_AnchoredPosition: {x: 5.4, y: -47.3}
+  m_AnchoredPosition: {x: 5.4000244, y: -47.30005}
   m_SizeDelta: {x: -2178.8, y: -94.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1997077251
