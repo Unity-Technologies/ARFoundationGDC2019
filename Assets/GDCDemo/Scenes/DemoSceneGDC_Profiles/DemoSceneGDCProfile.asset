@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
-  m_Name: PostProcessing Profile
+  m_Name: DemoSceneGDCProfile
   m_EditorClassIdentifier: 
   settings:
   - {fileID: 114394263384954406}
@@ -74,22 +74,22 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 21.98
+    value: 28.69
   threshold:
     overrideState: 1
-    value: 1.01
+    value: 1.06
   softKnee:
-    overrideState: 0
-    value: 0.5
+    overrideState: 1
+    value: 0.329
   clamp:
     overrideState: 0
     value: 65472
   diffusion:
-    overrideState: 0
-    value: 7
+    overrideState: 1
+    value: 5.38
   anamorphicRatio:
     overrideState: 0
-    value: 0
+    value: -0.38
   color:
     overrideState: 0
     value: {r: 1, g: 1, b: 1, a: 1}

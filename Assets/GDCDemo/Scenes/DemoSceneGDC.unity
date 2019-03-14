@@ -815,7 +815,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.7
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1266,67 +1266,6 @@ Transform:
   m_Father: {fileID: 1335839535}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1010765329
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 420, guid: f43e06ca81d7b464385511fe698f75dc, type: 3}
-      propertyPath: m_Name
-      value: Prefab_Timeline_CharacterSequence
-      objectReference: {fileID: 0}
-    - target: {fileID: 1094, guid: f43e06ca81d7b464385511fe698f75dc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1094, guid: f43e06ca81d7b464385511fe698f75dc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1094, guid: f43e06ca81d7b464385511fe698f75dc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1094, guid: f43e06ca81d7b464385511fe698f75dc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1094, guid: f43e06ca81d7b464385511fe698f75dc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1094, guid: f43e06ca81d7b464385511fe698f75dc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1094, guid: f43e06ca81d7b464385511fe698f75dc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1094, guid: f43e06ca81d7b464385511fe698f75dc, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1094, guid: f43e06ca81d7b464385511fe698f75dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1094, guid: f43e06ca81d7b464385511fe698f75dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1094, guid: f43e06ca81d7b464385511fe698f75dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1918, guid: f43e06ca81d7b464385511fe698f75dc, type: 3}
-      propertyPath: effectBlendSlider
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f43e06ca81d7b464385511fe698f75dc, type: 3}
 --- !u!1 &1285467404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1717,7 +1656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc8ef2373454446db9a3304a49c6cfb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlacedPrefab: {fileID: 420, guid: f43e06ca81d7b464385511fe698f75dc, type: 3}
+  m_PlacedPrefab: {fileID: 427, guid: f43e06ca81d7b464385511fe698f75dc, type: 3}
   m_PlacementTransform: {fileID: 971362453}
   m_PlacementCircle: {fileID: 1335839540}
 --- !u!1 &1405370715
