@@ -15,8 +15,8 @@ public class ShipMovementManager : MonoBehaviour
     [Header("Simulation Settings")]
     public float topBound = 20.0f;
     public float bottomBound = -20.0f;
-    public float leftBound = -23.5f;
-    public float rightBound = 23.5f;
+    public float leftBound = -10f;
+    public float rightBound = 10f;
 
     public float WorldResetBottom;
     public float WorldResetTop;

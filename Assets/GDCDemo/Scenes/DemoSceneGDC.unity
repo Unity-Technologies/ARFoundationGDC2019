@@ -453,6 +453,12 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!1 &318940322 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 338, guid: 4a96f8783db4f457eb086b01d4b31b52,
+    type: 3}
+  m_PrefabInstance: {fileID: 1014929957}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &339833635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,8 +1481,35 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1413, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+      propertyPath: m_SceneBindings.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
       propertyPath: m_InitialState
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+      propertyPath: m_SceneBindings.Array.data[5].key
+      value: 
+      objectReference: {fileID: 114248479521503030, guid: 0471336c86868a24089a347a684c89d1,
+        type: 2}
+    - target: {fileID: 1413, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+      propertyPath: m_SceneBindings.Array.data[5].value
+      value: 
+      objectReference: {fileID: 318940322}
+    - target: {fileID: 338, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1910188616712250967, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1910188618130220306, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
         type: 3}
