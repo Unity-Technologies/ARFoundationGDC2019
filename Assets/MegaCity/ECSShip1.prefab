@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6606747412074609657}
   - component: {fileID: 7193614794843445708}
   m_Layer: 0
-  m_Name: ECSTest 1
+  m_Name: ECSShip1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SerializedData:
     mesh: {fileID: 4300006, guid: bf794e8a08889654e9527228b07749d8, type: 3}
-    material: {fileID: 2100000, guid: 73422126b20df034ba96ed900ec2a387, type: 2}
+    material: {fileID: 2100000, guid: 320b9ad9a54cee94f9aec7e1756f728c, type: 2}
     subMesh: 0
     castShadows: 0
     receiveShadows: 0

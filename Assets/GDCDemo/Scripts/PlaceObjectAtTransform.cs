@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Playables;
@@ -54,7 +55,13 @@ public class PlaceObjectAtTransform : MonoBehaviour
                 m_PlacedObject = true;
                 //m_SpanwedObject = Instantiate(m_PlacedPrefab, m_PlacementTransform.position, Quaternion.identity);
                 m_SpanwedObject.transform.position = m_PlacementTransform.position;
+
+                Vector3 lookVector = Camera.main.transform.position - m_SpanwedObject.transform.position;
+                m_SpanwedObject.transform.rotation = Quaternion.LookRotation(lookVector, Vector3.up);
+                m_SpanwedObject.transform.rotation = new Quaternion(0, m_SpanwedObject.transform.rotation.y, 0, m_SpanwedObject.transform.rotation.w) * Quaternion.Euler(0,180,0);
+                
                 m_SpanwedObject.GetComponent<PlayableDirector>().Play();
+                
 
                 if (onPlacedObject != null)
                 {
@@ -64,6 +71,9 @@ public class PlaceObjectAtTransform : MonoBehaviour
             else
             {
                 m_SpanwedObject.transform.position = m_PlacementTransform.position;
+                Vector3 lookVector = Camera.main.transform.position - m_SpanwedObject.transform.position;
+                m_SpanwedObject.transform.rotation = Quaternion.LookRotation(lookVector, Vector3.up);
+                m_SpanwedObject.transform.rotation = new Quaternion(0, m_SpanwedObject.transform.rotation.y, 0, m_SpanwedObject.transform.rotation.w) * Quaternion.Euler(0,180,0);;
             }
         }
     }
