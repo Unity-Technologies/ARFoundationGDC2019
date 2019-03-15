@@ -13,8 +13,8 @@ public class ShipMovementManager : MonoBehaviour
     public static ShipMovementManager GM;
 
     [Header("Simulation Settings")]
-    public float topBound = 16.5f;
-    public float bottomBound = -13.5f;
+    public float topBound = 20.0f;
+    public float bottomBound = -20.0f;
     public float leftBound = -23.5f;
     public float rightBound = 23.5f;
 
@@ -25,8 +25,12 @@ public class ShipMovementManager : MonoBehaviour
     public GameObject enemyShipPrefab;
     public float enemySpeed = 1f;
 
+
+    public GameObject EnemyShip1;
     public GameObject EnemyShip2;
     public GameObject EnemyShip3;
+    public GameObject EnemyShip4;
+    public GameObject EnemyShip5;
 
     [Header("Spawn Settings")]
     public int enemyShipCount = 1;
@@ -52,19 +56,9 @@ public class ShipMovementManager : MonoBehaviour
 
     void Start()
     {
-        //bottomBound = RootObject.position.z - bottomBound;
-        //topBound = RootObject.position.z + topBound;
-        //WorldResetTop = RootObject.position.z + topBound;
-        //WorldResetBottom = RootObject.position.z + bottomBound;
-        
         Debug.Log("World reset top "+WorldResetTop);
         Debug.Log("World bottom "+WorldResetBottom);
         manager = World.Active.GetOrCreateManager<EntityManager>();
-        /*
-        AddShips(enemyShipCount, enemyShipPrefab);
-        AddShips(enemyShipCount, EnemyShip2);
-        AddShips(enemyShipCount, EnemyShip3);
-        */
         
     }
 
@@ -73,9 +67,12 @@ public class ShipMovementManager : MonoBehaviour
         WorldResetTop = RootObject.position.z + topBound;
         WorldResetBottom = RootObject.position.z + bottomBound;
         Debug.Log("in here");
-        AddShips(enemyShipCount, enemyShipPrefab);
+        AddShips(enemyShipCount, EnemyShip1);
         AddShips(enemyShipCount, EnemyShip2);
         AddShips(enemyShipCount, EnemyShip3);
+        AddShips(enemyShipCount, EnemyShip4);
+        AddShips(enemyShipCount, EnemyShip5);
+        
     }
 
     void Update()

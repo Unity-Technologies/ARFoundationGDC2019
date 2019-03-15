@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1802854, g: 0.22571607, b: 0.30692434, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028541, g: 0.225716, b: 0.3069239, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -807,7 +807,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1014929959}
         m_MethodName: TransitionToggle
         m_Mode: 1
         m_Arguments:
@@ -1419,6 +1419,149 @@ Transform:
   m_Father: {fileID: 1335839535}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1014929957
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 334, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+      propertyPath: m_Name
+      value: Prefab_Timeline_CharacterSequenceMegaCity
+      objectReference: {fileID: 0}
+    - target: {fileID: 839, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 839, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 839, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 839, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 839, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 839, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 839, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 839, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 839, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 839, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+      propertyPath: m_InitialState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: enemyShipPrefab
+      value: 
+      objectReference: {fileID: 229890742257591014, guid: 2df047289a6ec41dc95c4092030b5397,
+        type: 3}
+    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: EnemyShip2
+      value: 
+      objectReference: {fileID: 229890742257591014, guid: c9207e7f2b7fc49bc86bfcaa98b13ec0,
+        type: 3}
+    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: EnemyShip3
+      value: 
+      objectReference: {fileID: 229890742257591014, guid: a23e106292e0049da9b4ed500ecca8fb,
+        type: 3}
+    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: enemyShipCount
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: EnemyShip1
+      value: 
+      objectReference: {fileID: 229890742257591014, guid: 2df047289a6ec41dc95c4092030b5397,
+        type: 3}
+    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: EnemyShip4
+      value: 
+      objectReference: {fileID: 229890742257591014, guid: ef08c9a228ce74c42b4e9c19ee3f68a0,
+        type: 3}
+    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: EnemyShip5
+      value: 
+      objectReference: {fileID: 229890742257591014, guid: 540c03d4c6660438cb8ee0d3dbd64a61,
+        type: 3}
+    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: leftBound
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: rightBound
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5205096967321593772, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+--- !u!1 &1014929958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 334, guid: 4a96f8783db4f457eb086b01d4b31b52,
+    type: 3}
+  m_PrefabInstance: {fileID: 1014929957}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1014929959 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1441, guid: 4a96f8783db4f457eb086b01d4b31b52,
+    type: 3}
+  m_PrefabInstance: {fileID: 1014929957}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014929958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a143b931dfcbcb44a263bee3e0b6dca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1014929960 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
+    type: 3}
+  m_PrefabInstance: {fileID: 1014929957}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6539328483418481eb033f5467a13487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1148468919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,10 +1601,13 @@ MonoBehaviour:
   enemyShipPrefab: {fileID: 229890742257591014, guid: 2df047289a6ec41dc95c4092030b5397,
     type: 3}
   enemySpeed: 1
+  EnemyShip1: {fileID: 0}
   EnemyShip2: {fileID: 4975668564962253580, guid: 911e40ee1359a4e64ae0513f8f7d4c8c,
     type: 3}
   EnemyShip3: {fileID: 84402292738494239, guid: 939f56df9b50c4a518be8f71f0c21ec7,
     type: 3}
+  EnemyShip4: {fileID: 0}
+  EnemyShip5: {fileID: 0}
   enemyShipCount: 1000
   enemyShipIncremement: 1
   RootObject: {fileID: 224272497}
@@ -1886,7 +2032,7 @@ MonoBehaviour:
   m_PlacedPrefab: {fileID: 334, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
   m_PlacementTransform: {fileID: 971362453}
   m_PlacementCircle: {fileID: 1335839540}
-  m_SpanwedObject: {fileID: 0}
+  m_SpanwedObject: {fileID: 1014929958}
 --- !u!114 &1335839542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2304,7 +2450,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1014929960}
         m_MethodName: SpawnShips
         m_Mode: 1
         m_Arguments:

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Playables;
 using UnityEngine.XR.ARFoundation;
 
 [RequireComponent(typeof(ARSessionOrigin))]
@@ -53,6 +54,7 @@ public class PlaceObjectAtTransform : MonoBehaviour
                 m_PlacedObject = true;
                 //m_SpanwedObject = Instantiate(m_PlacedPrefab, m_PlacementTransform.position, Quaternion.identity);
                 m_SpanwedObject.transform.position = m_PlacementTransform.position;
+                m_SpanwedObject.GetComponent<PlayableDirector>().Play();
 
                 if (onPlacedObject != null)
                 {
