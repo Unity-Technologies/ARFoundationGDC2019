@@ -56,8 +56,6 @@ public class ShipMovementManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("World reset top "+WorldResetTop);
-        Debug.Log("World bottom "+WorldResetBottom);
         manager = World.Active.GetOrCreateManager<EntityManager>();
         
     }
@@ -66,7 +64,6 @@ public class ShipMovementManager : MonoBehaviour
     {
         WorldResetTop = RootObject.position.z + topBound;
         WorldResetBottom = RootObject.position.z + bottomBound;
-        Debug.Log("in here");
         AddShips(enemyShipCount, EnemyShip1);
         AddShips(enemyShipCount, EnemyShip2);
         AddShips(enemyShipCount, EnemyShip3);
@@ -95,7 +92,7 @@ public class ShipMovementManager : MonoBehaviour
             
             manager.SetComponentData(entities[i], new Position { Value = new float3(xVal, yVal, zVal) });
             manager.SetComponentData(entities[i], new Rotation { Value = new quaternion(RootObject.rotation.x, RootObject.rotation.y, RootObject.rotation.z, RootObject.rotation.w) });
-            manager.SetComponentData(entities[i], new MovementData{Value = enemySpeed});
+            manager.SetComponentData(entities[i], new MovementData{Value = Random.Range(0.25f, 2.5f)});
 
             spawnedShip++;
             if (spawnedShip > 2)
