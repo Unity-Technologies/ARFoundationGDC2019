@@ -53,7 +53,7 @@ MonoBehaviour:
   terraformerPBRObject: {fileID: 509}
   terraformerHologramObject: {fileID: 336}
   prefabRoot: {fileID: 839}
-  effectBlendSlider: 0.861
+  effectBlendSlider: 1
   effectBlendCurve:
     serializedVersion: 2
     m_Curve:
@@ -114,12 +114,12 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 114248479521503030, guid: 0471336c86868a24089a347a684c89d1, type: 2}
     value: {fileID: 338}
+  - key: {fileID: 114759965915154784, guid: 0471336c86868a24089a347a684c89d1, type: 2}
+    value: {fileID: 335}
   - key: {fileID: 114568715666813630, guid: 0471336c86868a24089a347a684c89d1, type: 2}
     value: {fileID: 1014929964}
   - key: {fileID: 114452363173752100, guid: 0471336c86868a24089a347a684c89d1, type: 2}
     value: {fileID: 1014929963}
-  - key: {fileID: 114759965915154784, guid: 0471336c86868a24089a347a684c89d1, type: 2}
-    value: {fileID: 335}
   m_ExposedReferences:
     m_References: []
 --- !u!95 &1370
@@ -8239,7 +8239,7 @@ PrefabInstance:
     - target: {fileID: 3851725567750741354, guid: 002bc268c70414d36a77c5ec416b01a5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 7.6
       objectReference: {fileID: 0}
     - target: {fileID: 3851725567750741354, guid: 002bc268c70414d36a77c5ec416b01a5,
         type: 3}
