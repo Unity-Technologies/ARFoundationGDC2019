@@ -2,15 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaceWIthRemote : MonoBehaviour
+public class PlaceWithRemote : MonoBehaviour
 {
 
-    [SerializeField] GameObject hitObjectPrefab;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] GameObject m_hitObjectPrefab = null;
 
     // Update is called once per frame
     void Update()
@@ -22,7 +17,7 @@ public class PlaceWIthRemote : MonoBehaviour
             if (Physics.Raycast(cameraRay, out hitInfo))
             {
                 Debug.Log(hitInfo.transform.name);
-                Instantiate(hitObjectPrefab, hitInfo.point, Quaternion.identity);
+                Instantiate(m_hitObjectPrefab, hitInfo.point, Quaternion.identity);
             }
         }
     }

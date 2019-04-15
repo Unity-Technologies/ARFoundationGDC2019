@@ -2,9 +2,9 @@
 
 public class LightEstimationEmission : MonoBehaviour
 {
-    [SerializeField] SkinnedMeshRenderer m_RobotMeshRenderer;
-    [SerializeField] SkinnedMeshRenderer m_TeraMeshRendererBody;
-    [SerializeField] SkinnedMeshRenderer m_TeraMeshRendererHead;
+    [SerializeField] SkinnedMeshRenderer m_RobotMeshRenderer = null;
+    [SerializeField] SkinnedMeshRenderer m_TeraMeshRendererBody = null;
+    [SerializeField] SkinnedMeshRenderer m_TeraMeshRendererHead = null;
 
     static string k_EmissionReference = "_Emission";
 

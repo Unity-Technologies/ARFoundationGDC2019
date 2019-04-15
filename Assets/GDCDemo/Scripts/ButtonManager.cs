@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
-    [SerializeField] GameObject m_ButtonPanelStart;
-    [SerializeField] GameObject m_ButtonPanelFinal;
+    [SerializeField] GameObject m_ButtonPanelStart = null;
+    [SerializeField] GameObject m_ButtonPanelFinal = null;
 
     bool m_ShowingStartPanel = true;
     // Update is called once per frame

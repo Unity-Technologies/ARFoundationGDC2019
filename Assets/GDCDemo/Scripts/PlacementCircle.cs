@@ -8,10 +8,8 @@ using UnityEngine.XR.ARFoundation;
 
 public class PlacementCircle : MonoBehaviour
 {
-    bool m_OnPlane = false;
-
-    [SerializeField] GameObject m_PlacementCircle;
-    [SerializeField] Toggle m_RockButton;
+    [SerializeField] GameObject m_PlacementCircle = null;
+    [SerializeField] Toggle m_RockButton = null;
     
     static List<ARRaycastHit> k_Hits = new List<ARRaycastHit>();
 

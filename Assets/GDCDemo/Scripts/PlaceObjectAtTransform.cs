@@ -14,8 +14,8 @@ public class PlaceObjectAtTransform : MonoBehaviour
     [Tooltip("Instantiates this prefab on a plane at the touch location.")]
     GameObject m_PlacedPrefab;
 
-    [SerializeField] Transform m_PlacementTransform;
-    [SerializeField] PlacementCircle m_PlacementCircle;
+    [SerializeField] Transform m_PlacementTransform = null;
+    [SerializeField] PlacementCircle m_PlacementCircle = null;
 
     /// <summary>
     /// The prefab to instantiate on touch.
@@ -28,7 +28,7 @@ public class PlaceObjectAtTransform : MonoBehaviour
 
     bool m_CanPlace = false;
     bool m_PlacedObject = false;
-    [SerializeField] GameObject m_SpanwedObject;
+    [SerializeField] GameObject m_SpanwedObject = null;
     
     public static event Action onPlacedObject;
     

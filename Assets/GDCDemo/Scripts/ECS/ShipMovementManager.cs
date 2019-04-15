@@ -7,9 +7,6 @@ using Random = UnityEngine.Random;
 
 public class ShipMovementManager : MonoBehaviour
 {
-    #region GAME_MANAGER_STUFF
-
-    //Boilerplat game manager stuff that is the same in each example
     public static ShipMovementManager GM;
 
     [Header("Simulation Settings")]
@@ -36,10 +33,6 @@ public class ShipMovementManager : MonoBehaviour
     public int enemyShipCount = 1;
     public int enemyShipIncremement = 1;
 
-    int count;
-
-    int spawnedShip = 0;
-
     void Awake()
     {
         if (GM == null)
@@ -47,11 +40,10 @@ public class ShipMovementManager : MonoBehaviour
         else if (GM != this)
             Destroy(gameObject);
     }
-    #endregion
 
     EntityManager manager;
 
-    [SerializeField] Transform RootObject;
+    [SerializeField] Transform RootObject = null;
     
 
     void Start()
@@ -104,17 +96,9 @@ public class ShipMovementManager : MonoBehaviour
             manager.SetComponentData(entities[i], new Position { Value = new float3(xVal, yVal, zVal) });
             manager.SetComponentData(entities[i], new Rotation { Value = new quaternion(RootObject.rotation.x, RootObject.rotation.y, RootObject.rotation.z, RootObject.rotation.w) });
             manager.SetComponentData(entities[i], new MovementData{Value = Random.Range(0.25f, 2.5f)});
-
-            spawnedShip++;
-            if (spawnedShip > 2)
-            {
-                spawnedShip = 0;
-            }
             
         }
         entities.Dispose();
-
-        count += amount;
     }
 }
 

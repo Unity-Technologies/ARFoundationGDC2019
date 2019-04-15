@@ -8,7 +8,7 @@ public class AutoObjectPlacement : MonoBehaviour
 {
     [SerializeField] float m_ProtectedRadius = 1;
 
-    [SerializeField] List<GameObject> m_PlacementPrefabs;
+    [SerializeField] List<GameObject> m_PlacementPrefabs = null;
     ARPointCloudManager m_PointCloudManager;
 
     ARSessionOrigin m_SessionOrigin;
@@ -18,8 +18,6 @@ public class AutoObjectPlacement : MonoBehaviour
     
     Vector2 m_ScreenCenter;
     int m_PlacementIndex = 0;
-    float m_MaxSize = 0.5f;
-    float m_MinSize = 0.2f;
     GameObject m_SpawnObject;
     float m_RandomScale;
     
@@ -55,10 +53,6 @@ public class AutoObjectPlacement : MonoBehaviour
         else
         {
             m_SpawnObject = RandomItem();
-            /*
-            m_RandomScale = Random.Range(m_MinSize, m_MaxSize);
-            m_SpawnObject.transform.localScale = new Vector3(m_RandomScale, m_RandomScale, m_RandomScale);
-            */
             Instantiate(m_SpawnObject, hitPose.position, hitPose.rotation);
         }
     }
