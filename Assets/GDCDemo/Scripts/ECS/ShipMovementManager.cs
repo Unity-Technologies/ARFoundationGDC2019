@@ -57,6 +57,17 @@ public class ShipMovementManager : MonoBehaviour
     void Start()
     {
         manager = World.Active.GetOrCreateManager<EntityManager>();
+    }
+
+    void OnDisable()
+    {
+        // scene has been reset, clean up entities
+        NativeArray<Entity> allships = manager.GetAllEntities();
+
+        for (int i = 0; i < allships.Length; i++)
+        {
+            manager.DestroyEntity(allships[i]);
+        }
         
     }
 
