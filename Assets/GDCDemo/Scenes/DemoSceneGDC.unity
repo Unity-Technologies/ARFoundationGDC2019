@@ -557,17 +557,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1335839540}
-        m_MethodName: ToggleCircle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -1454,10 +1443,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Timeline_CharacterSequenceMegaCity
       objectReference: {fileID: 0}
-    - target: {fileID: 338, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 839, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
       propertyPath: m_LocalPosition.x
       value: 100
@@ -1501,6 +1486,57 @@ PrefabInstance:
     - target: {fileID: 839, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: enemyShipPrefab
+      value: 
+      objectReference: {fileID: 229890742257591014, guid: 2df047289a6ec41dc95c4092030b5397,
+        type: 3}
+    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: EnemyShip2
+      value: 
+      objectReference: {fileID: 229890742257591014, guid: c9207e7f2b7fc49bc86bfcaa98b13ec0,
+        type: 3}
+    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: EnemyShip3
+      value: 
+      objectReference: {fileID: 229890742257591014, guid: a23e106292e0049da9b4ed500ecca8fb,
+        type: 3}
+    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: enemyShipCount
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: EnemyShip1
+      value: 
+      objectReference: {fileID: 229890742257591014, guid: 2df047289a6ec41dc95c4092030b5397,
+        type: 3}
+    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: EnemyShip4
+      value: 
+      objectReference: {fileID: 229890742257591014, guid: ef08c9a228ce74c42b4e9c19ee3f68a0,
+        type: 3}
+    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: EnemyShip5
+      value: 
+      objectReference: {fileID: 229890742257591014, guid: 540c03d4c6660438cb8ee0d3dbd64a61,
+        type: 3}
+    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: leftBound
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: rightBound
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1413, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
       propertyPath: m_SceneBindings.Array.size
@@ -1554,6 +1590,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 8.41068
       objectReference: {fileID: 0}
+    - target: {fileID: 338, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205096968275147111, guid: 4a96f8783db4f457eb086b01d4b31b52,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1910188616712250967, guid: 4a96f8783db4f457eb086b01d4b31b52,
         type: 3}
       propertyPath: m_IsActive
@@ -1563,62 +1608,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
-        type: 3}
-      propertyPath: enemyShipPrefab
-      value: 
-      objectReference: {fileID: 229890742257591014, guid: 2df047289a6ec41dc95c4092030b5397,
-        type: 3}
-    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
-        type: 3}
-      propertyPath: EnemyShip2
-      value: 
-      objectReference: {fileID: 229890742257591014, guid: c9207e7f2b7fc49bc86bfcaa98b13ec0,
-        type: 3}
-    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
-        type: 3}
-      propertyPath: EnemyShip3
-      value: 
-      objectReference: {fileID: 229890742257591014, guid: a23e106292e0049da9b4ed500ecca8fb,
-        type: 3}
-    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
-        type: 3}
-      propertyPath: enemyShipCount
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
-        type: 3}
-      propertyPath: EnemyShip1
-      value: 
-      objectReference: {fileID: 229890742257591014, guid: 2df047289a6ec41dc95c4092030b5397,
-        type: 3}
-    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
-        type: 3}
-      propertyPath: EnemyShip4
-      value: 
-      objectReference: {fileID: 229890742257591014, guid: ef08c9a228ce74c42b4e9c19ee3f68a0,
-        type: 3}
-    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
-        type: 3}
-      propertyPath: EnemyShip5
-      value: 
-      objectReference: {fileID: 229890742257591014, guid: 540c03d4c6660438cb8ee0d3dbd64a61,
-        type: 3}
-    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
-        type: 3}
-      propertyPath: leftBound
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5205096967321593774, guid: 4a96f8783db4f457eb086b01d4b31b52,
-        type: 3}
-      propertyPath: rightBound
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5205096968275147111, guid: 4a96f8783db4f457eb086b01d4b31b52,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7.6
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5205096967321593772, guid: 4a96f8783db4f457eb086b01d4b31b52, type: 3}

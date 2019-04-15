@@ -81,12 +81,7 @@ public class PlaceObjectAtTransform : MonoBehaviour
     public void TogglePlacement()
     {
         m_CanPlace = !m_CanPlace;
-
-        // turning button off
-        if (m_CanPlace == false)
-        {
-            m_PlacementCircle.ToggleCircle();
-        }
+        m_PlacementCircle.ToggleCircle();
     }
     
     bool IsTouchOverUIObject(Touch touch)
