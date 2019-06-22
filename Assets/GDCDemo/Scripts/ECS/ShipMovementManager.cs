@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 public class ShipMovementManager : MonoBehaviour
 {
-    public static ShipMovementManager GM;
+    public static ShipMovementManager k_shipManager;
 
     [Header("Simulation Settings")]
     public float topBound = 20.0f;
@@ -19,10 +19,6 @@ public class ShipMovementManager : MonoBehaviour
     public float WorldResetTop;
 
     [Header("Enemy Settings")]
-    public GameObject enemyShipPrefab;
-    public float enemySpeed = 1f;
-
-
     public GameObject EnemyShip1;
     public GameObject EnemyShip2;
     public GameObject EnemyShip3;
@@ -31,42 +27,42 @@ public class ShipMovementManager : MonoBehaviour
 
     [Header("Spawn Settings")]
     public int enemyShipCount = 1;
-    public int enemyShipIncremement = 1;
+    public int enemyShipIncrement = 1;
 
     void Awake()
     {
-        if (GM == null)
-            GM = this;
-        else if (GM != this)
+        if (k_shipManager == null)
+            k_shipManager = this;
+        else if (k_shipManager != this)
             Destroy(gameObject);
     }
 
-    EntityManager manager;
+    EntityManager m_Manager;
 
-    [SerializeField] Transform RootObject = null;
+    [SerializeField] Transform m_RootObject = null;
     
 
     void Start()
     {
-        manager = World.Active.GetOrCreateManager<EntityManager>();
+        m_Manager = World.Active.GetOrCreateManager<EntityManager>();
     }
 
     void OnDisable()
     {
         // scene has been reset, clean up entities
-        NativeArray<Entity> allships = manager.GetAllEntities();
+        NativeArray<Entity> m_Allships = m_Manager.GetAllEntities();
 
-        for (int i = 0; i < allships.Length; i++)
+        for (int i = 0; i < m_Allships.Length; i++)
         {
-            manager.DestroyEntity(allships[i]);
+            m_Manager.DestroyEntity(m_Allships[i]);
         }
         
     }
 
     public void SpawnShips()
     {
-        WorldResetTop = RootObject.position.z + topBound;
-        WorldResetBottom = RootObject.position.z + bottomBound;
+        WorldResetTop = m_RootObject.position.z + topBound;
+        WorldResetBottom = m_RootObject.position.z + bottomBound;
         AddShips(enemyShipCount, EnemyShip1);
         AddShips(enemyShipCount, EnemyShip2);
         AddShips(enemyShipCount, EnemyShip3);
@@ -78,27 +74,27 @@ public class ShipMovementManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown("space"))
-            AddShips(enemyShipIncremement, EnemyShip3);
+            AddShips(enemyShipIncrement, EnemyShip3);
     }
 
     void AddShips(int amount, GameObject shipPrefab)
     {
-        NativeArray<Entity> entities = new NativeArray<Entity>(amount, Allocator.Temp);
+        NativeArray<Entity> m_Entities = new NativeArray<Entity>(amount, Allocator.Temp);
 
-        manager.Instantiate(shipPrefab, entities);
+        m_Manager.Instantiate(shipPrefab, m_Entities);
 
         for (int i = 0; i < amount; i++)
         {
-            float xVal = UnityEngine.Random.Range(leftBound, rightBound) + RootObject.position.x;
-            float yVal = UnityEngine.Random.Range(-5.0f, 5.0f) + RootObject.position.y;
-            float zVal = (RootObject.position.z) + Random.Range(bottomBound, topBound);
+            float m_XVal = UnityEngine.Random.Range(leftBound, rightBound) + m_RootObject.position.x;
+            float m_YVal = UnityEngine.Random.Range(-5.0f, 5.0f) + m_RootObject.position.y;
+            float m_ZVal = (m_RootObject.position.z) + Random.Range(bottomBound, topBound);
             
-            manager.SetComponentData(entities[i], new Position { Value = new float3(xVal, yVal, zVal) });
-            manager.SetComponentData(entities[i], new Rotation { Value = new quaternion(RootObject.rotation.x, RootObject.rotation.y, RootObject.rotation.z, RootObject.rotation.w) });
-            manager.SetComponentData(entities[i], new MovementData{Value = Random.Range(0.25f, 2.5f)});
+            m_Manager.SetComponentData(m_Entities[i], new Position { Value = new float3(m_XVal, m_YVal, m_ZVal) });
+            m_Manager.SetComponentData(m_Entities[i], new Rotation { Value = new quaternion(m_RootObject.rotation.x, m_RootObject.rotation.y, m_RootObject.rotation.z, m_RootObject.rotation.w) });
+            m_Manager.SetComponentData(m_Entities[i], new MovementData{Value = Random.Range(0.25f, 2.5f)});
             
         }
-        entities.Dispose();
+        m_Entities.Dispose();
     }
 }
 

@@ -17,13 +17,17 @@ public class LightEstimationEmission : MonoBehaviour
  
     void Update()
     {
-        // robot body
-        m_RobotMeshRenderer.sharedMaterials[0].SetFloat(k_EmissionReference, m_LightEstimation.brightness.Value);
-        // robot head
-        m_RobotMeshRenderer.sharedMaterials[2].SetFloat(k_EmissionReference, m_LightEstimation.brightness.Value);
-        
-        // teraformer
-        m_TeraMeshRendererBody.sharedMaterials[0].SetFloat(k_EmissionReference, m_LightEstimation.brightness.Value);
-        m_TeraMeshRendererHead.sharedMaterials[0].SetFloat(k_EmissionReference, m_LightEstimation.brightness.Value);
+        if (m_LightEstimation.brightness.HasValue)
+        {
+            // robot body
+            m_RobotMeshRenderer.sharedMaterials[0].SetFloat(k_EmissionReference, m_LightEstimation.brightness.Value);
+
+            // robot head
+            m_RobotMeshRenderer.sharedMaterials[2].SetFloat(k_EmissionReference, m_LightEstimation.brightness.Value);
+
+            // teraformer
+            m_TeraMeshRendererBody.sharedMaterials[0].SetFloat(k_EmissionReference, m_LightEstimation.brightness.Value);
+            m_TeraMeshRendererHead.sharedMaterials[0].SetFloat(k_EmissionReference, m_LightEstimation.brightness.Value);
+        }
     }
 }

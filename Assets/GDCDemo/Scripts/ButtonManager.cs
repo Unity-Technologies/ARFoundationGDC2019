@@ -13,10 +13,10 @@ public class ButtonManager : MonoBehaviour
     {
         if (Input.touchCount > 1 && Input.touchCount < 3)
         {
-            Touch firstTouch = Input.GetTouch(0);
-            Touch secondTouch = Input.GetTouch(1);
+            Touch m_FirstTouch = Input.GetTouch(0);
+            Touch m_SecondTouch = Input.GetTouch(1);
             
-            if (firstTouch.phase == TouchPhase.Began || secondTouch.phase == TouchPhase.Began)
+            if (m_FirstTouch.phase == TouchPhase.Began || m_SecondTouch.phase == TouchPhase.Began)
             {
                 TogglePanels();
             }

@@ -17,9 +17,6 @@ using UnityEngine.Experimental.Rendering.LightweightPipeline;
 
         public RenderRes maxRenderSize = RenderRes._720p;
 
-
-
-   
         // Use this for initialization
         void Start()
         {

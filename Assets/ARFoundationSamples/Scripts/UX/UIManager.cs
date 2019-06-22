@@ -44,7 +44,6 @@ public class UIManager : MonoBehaviour
     {
         ARSubsystemManager.cameraFrameReceived += FrameChanged;
         PlaceMultipleObjectsOnPlane.onPlacedObject += PlacedObject;
-        PlaceSingleObjectOnPlane.onPlacedObject += PlacedObject;
         PlaceObjectAtTransform.onPlacedObject += PlacedObject;
     }
 
@@ -52,7 +51,6 @@ public class UIManager : MonoBehaviour
     {
         ARSubsystemManager.cameraFrameReceived -= FrameChanged;
         PlaceMultipleObjectsOnPlane.onPlacedObject -= PlacedObject;
-        PlaceSingleObjectOnPlane.onPlacedObject -= PlacedObject;
         PlaceObjectAtTransform.onPlacedObject -= PlacedObject;
     }
 

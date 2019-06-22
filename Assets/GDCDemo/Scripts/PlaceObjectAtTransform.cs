@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Playables;
@@ -11,7 +9,7 @@ using UnityEngine.XR.ARFoundation;
 public class PlaceObjectAtTransform : MonoBehaviour
 {
     [SerializeField]
-    [Tooltip("Instantiates this prefab on a plane at the touch location.")]
+    [Tooltip("Instantiates this prefab on a plane at the transform location.")]
     GameObject m_PlacedPrefab;
 
     [SerializeField] Transform m_PlacementTransform = null;
@@ -43,9 +41,9 @@ public class PlaceObjectAtTransform : MonoBehaviour
                 return;
             }
 
-            var touch = Input.GetTouch(0);
+            var m_Touch = Input.GetTouch(0);
 
-            if (IsTouchOverUIObject(touch))
+            if (IsTouchOverUIObject(m_Touch))
             {
                 return;
             }
@@ -53,15 +51,12 @@ public class PlaceObjectAtTransform : MonoBehaviour
             if (!m_PlacedObject)
             {
                 m_PlacedObject = true;
-                //m_SpanwedObject = Instantiate(m_PlacedPrefab, m_PlacementTransform.position, Quaternion.identity);
                 m_SpanwedObject.transform.position = m_PlacementTransform.position;
 
-                Vector3 lookVector = Camera.main.transform.position - m_SpanwedObject.transform.position;
-                m_SpanwedObject.transform.rotation = Quaternion.LookRotation(lookVector, Vector3.up);
-                m_SpanwedObject.transform.rotation = new Quaternion(0, m_SpanwedObject.transform.rotation.y, 0, m_SpanwedObject.transform.rotation.w) * Quaternion.Euler(0,180,0);
+                RotateTowardCamera();
                 
+                // play jump timeline animation
                 m_SpanwedObject.GetComponent<PlayableDirector>().Play();
-                
 
                 if (onPlacedObject != null)
                 {
@@ -71,9 +66,7 @@ public class PlaceObjectAtTransform : MonoBehaviour
             else
             {
                 m_SpanwedObject.transform.position = m_PlacementTransform.position;
-                Vector3 lookVector = Camera.main.transform.position - m_SpanwedObject.transform.position;
-                m_SpanwedObject.transform.rotation = Quaternion.LookRotation(lookVector, Vector3.up);
-                m_SpanwedObject.transform.rotation = new Quaternion(0, m_SpanwedObject.transform.rotation.y, 0, m_SpanwedObject.transform.rotation.w) * Quaternion.Euler(0,180,0);;
+                RotateTowardCamera();
             }
         }
     }
@@ -86,11 +79,18 @@ public class PlaceObjectAtTransform : MonoBehaviour
     
     bool IsTouchOverUIObject(Touch touch)
     {   
-        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
-        eventDataCurrentPosition.position = touch.position;
-        List<RaycastResult> results = new List<RaycastResult>();
-        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
-        return results.Count > 0;
+        PointerEventData m_EventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        m_EventDataCurrentPosition.position = touch.position;
+        List<RaycastResult> m_Results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(m_EventDataCurrentPosition, m_Results);
+        return m_Results.Count > 0;
+    }
+
+    void RotateTowardCamera()
+    {
+        Vector3 m_LookVector = Camera.main.transform.position - m_SpanwedObject.transform.position;
+        m_SpanwedObject.transform.rotation = Quaternion.LookRotation(m_LookVector, Vector3.up);
+        m_SpanwedObject.transform.rotation = new Quaternion(0, m_SpanwedObject.transform.rotation.y, 0, m_SpanwedObject.transform.rotation.w) * Quaternion.Euler(0,180,0);
     }
 
 

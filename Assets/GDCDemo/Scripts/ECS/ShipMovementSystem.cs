@@ -17,14 +17,14 @@ public class ShipMovementSystem : JobComponentSystem
 
         public void Execute(ref Position position, [ReadOnly] ref Rotation rotation, [ReadOnly] ref MovementData speed)
         {
-            float3 value = position.Value;
+            float3 m_Value = position.Value;
 
-            value += deltaTime * speed.Value * math.forward(rotation.Value);
+            m_Value += deltaTime * speed.Value * math.forward(rotation.Value);
 
-            if (value.z < bottomBound)
-                value.z = topBound;
+            if (m_Value.z < bottomBound)
+                m_Value.z = topBound;
 
-            position.Value = value;
+            position.Value = m_Value;
         }
     }
 
@@ -32,10 +32,8 @@ public class ShipMovementSystem : JobComponentSystem
     {
         MovementJob moveJob = new MovementJob
         {
-            //topBound = ShipMovementManager.GM.topBound,
-            //bottomBound = ShipMovementManager.GM.bottomBound,
-            topBound = ShipMovementManager.GM.WorldResetTop,
-            bottomBound = ShipMovementManager.GM.WorldResetBottom,
+            topBound = ShipMovementManager.k_shipManager.WorldResetTop,
+            bottomBound = ShipMovementManager.k_shipManager.WorldResetBottom,
             deltaTime = Time.deltaTime
         };
       

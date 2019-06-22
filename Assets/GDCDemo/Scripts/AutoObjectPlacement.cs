@@ -43,26 +43,26 @@ public class AutoObjectPlacement : MonoBehaviour
 
     void PlaceObjectTest()
     {
-        var hitPose = s_Hits[0].pose;
-        Collider[] hitColliders = Physics.OverlapSphere(hitPose.position, m_ProtectedRadius);
+        var m_HitPose = s_Hits[0].pose;
+        Collider[] m_HitColliders = Physics.OverlapSphere(m_HitPose.position, m_ProtectedRadius);
         
-        if (hitColliders.Length > 0)
+        if (m_HitColliders.Length > 0)
         {
             return;
         }
         else
         {
             m_SpawnObject = RandomItem();
-            Instantiate(m_SpawnObject, hitPose.position, hitPose.rotation);
+            Instantiate(m_SpawnObject, m_HitPose.position, m_HitPose.rotation);
         }
     }
 
     GameObject RandomItem()
     {
-        int newIndex = Random.Range(0, m_PlacementPrefabs.Count);
-        if (newIndex != m_PlacementIndex)
+        int m_NewIndex = Random.Range(0, m_PlacementPrefabs.Count);
+        if (m_NewIndex != m_PlacementIndex)
         {
-            m_PlacementIndex = newIndex;
+            m_PlacementIndex = m_NewIndex;
             return m_PlacementPrefabs[m_PlacementIndex];
         }
         else
