@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.XR;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
 
 public class AutoObjectPlacement : MonoBehaviour
 {
@@ -10,11 +10,12 @@ public class AutoObjectPlacement : MonoBehaviour
 
     [SerializeField] List<GameObject> m_PlacementPrefabs = null;
     ARPointCloudManager m_PointCloudManager;
-
+    ARRaycastManager m_RaycastManager;
+    
     ARSessionOrigin m_SessionOrigin;
     static List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
 
-    TrackableType m_TrackableTypeMask = TrackableType.FeaturePoint | TrackableType.PlaneWithinPolygon;
+    TrackableType m_TrackableTypeMask = TrackableType.PlaneWithinPolygon | TrackableType.FeaturePoint;
     
     Vector2 m_ScreenCenter;
     int m_PlacementIndex = 0;
@@ -26,6 +27,7 @@ public class AutoObjectPlacement : MonoBehaviour
     void Start()
     {
         m_SessionOrigin = GetComponent<ARSessionOrigin>();
+        m_RaycastManager = GetComponent<ARRaycastManager>();
         m_ScreenCenter = new Vector2(Screen.width / 2, Screen.height / 2);
         m_PointCloudManager = GetComponent<ARPointCloudManager>();
     }
@@ -34,7 +36,7 @@ public class AutoObjectPlacement : MonoBehaviour
     {
         if (m_CanPlace)
         {
-            if (m_SessionOrigin.Raycast(m_ScreenCenter, s_Hits, m_TrackableTypeMask))
+            if (m_RaycastManager.Raycast(m_ScreenCenter, s_Hits, m_TrackableTypeMask))
             {
                 PlaceObjectTest();
             }
@@ -74,6 +76,11 @@ public class AutoObjectPlacement : MonoBehaviour
     public void TogglePlacement()
     {
         m_CanPlace = !m_CanPlace;
-        m_PointCloudManager.pointCloud.gameObject.SetActive(m_CanPlace);
+
+        foreach (var pointcloud in m_PointCloudManager.trackables)
+        {
+            pointcloud.gameObject.SetActive(m_CanPlace);
+        }
+        
     }
 }

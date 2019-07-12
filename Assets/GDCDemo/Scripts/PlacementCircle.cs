@@ -5,6 +5,8 @@ using UnityEngine.Experimental.XR;
 using UnityEngine.Experimental.XR.Interaction;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
+using TrackableType = UnityEngine.XR.ARSubsystems.TrackableType;
 
 public class PlacementCircle : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class PlacementCircle : MonoBehaviour
     static List<ARRaycastHit> k_Hits = new List<ARRaycastHit>();
 
     ARSessionOrigin m_SessionOrigin;
+    ARRaycastManager m_RaycastManager;
     Vector2 m_ScreenCenter;
     bool m_PortraitMode = false;
     bool m_ShowCircle = false;
@@ -23,6 +26,7 @@ public class PlacementCircle : MonoBehaviour
     void Awake()
     {
         m_SessionOrigin = GetComponent<ARSessionOrigin>();
+        m_RaycastManager = GetComponent<ARRaycastManager>();
         m_CircleTransform = m_PlacementCircle.transform;
         m_PortraitMode = (Input.deviceOrientation == DeviceOrientation.Portrait ||
                           Input.deviceOrientation == DeviceOrientation.PortraitUpsideDown);
@@ -48,7 +52,7 @@ public class PlacementCircle : MonoBehaviour
                     m_ScreenCenter = GetCenterScreen();
                 }
 
-                if (m_SessionOrigin.Raycast(m_ScreenCenter, k_Hits, TrackableType.PlaneWithinPolygon))
+                if (m_RaycastManager.Raycast(m_ScreenCenter, k_Hits, TrackableType.PlaneWithinPolygon))
                 {
                     m_PlacementCircle.SetActive(true);
                     m_CircleTransform.localPosition = k_Hits[0].pose.position;

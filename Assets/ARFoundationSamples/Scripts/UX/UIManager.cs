@@ -10,6 +10,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     ARPlaneManager m_PlaneManager;
 
+    [SerializeField]
+    ARCameraManager m_CameraManager;
+
     public ARPlaneManager planeManager
     {
         get { return m_PlaneManager; }
@@ -42,14 +45,14 @@ public class UIManager : MonoBehaviour
 
     void OnEnable()
     {
-        ARSubsystemManager.cameraFrameReceived += FrameChanged;
+        m_CameraManager.frameReceived += FrameChanged;
         PlaceMultipleObjectsOnPlane.onPlacedObject += PlacedObject;
         PlaceObjectAtTransform.onPlacedObject += PlacedObject;
     }
 
     void OnDisable()
     {
-        ARSubsystemManager.cameraFrameReceived -= FrameChanged;
+        m_CameraManager.frameReceived -= FrameChanged;
         PlaceMultipleObjectsOnPlane.onPlacedObject -= PlacedObject;
         PlaceObjectAtTransform.onPlacedObject -= PlacedObject;
     }
@@ -74,8 +77,7 @@ public class UIManager : MonoBehaviour
         if (planeManager == null)
             return false;
 
-        planeManager.GetAllPlanes(s_Planes);
-        return s_Planes.Count > 0;
+        return planeManager.trackables.count > 0;
     }
 
     void PlacedObject()

@@ -2,8 +2,8 @@
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.XR.ARExtensions;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
 
 /// <summary>
 /// This component tests getting the latest camera image
@@ -30,22 +30,25 @@ using UnityEngine.XR.ARFoundation;
 public class CameraTextureToShaderGraph : MonoBehaviour
 {
 
+    ARCameraManager m_CameraManager;
+
     void OnEnable()
     {
-        ARSubsystemManager.cameraFrameReceived += OnCameraFrameReceived;
+        m_CameraManager = GetComponent<ARCameraManager>();
+        m_CameraManager.frameReceived += OnCameraFrameReceived;
     }
 
     void OnDisable()
     {
-        ARSubsystemManager.cameraFrameReceived -= OnCameraFrameReceived;
+        m_CameraManager.frameReceived -= OnCameraFrameReceived;
     }
 
     unsafe void OnCameraFrameReceived(ARCameraFrameEventArgs eventArgs)
     {
         // Attempt to get the latest camera image. If this method succeeds,
         // it acquires a native resource that must be disposed (see below).
-        CameraImage image;
-        if (!ARSubsystemManager.cameraSubsystem.TryGetLatestImage(out image))
+        XRCameraImage image;
+        if (!m_CameraManager.TryGetLatestImage(out image))
             return;
 
         // Display some information about the camera image
@@ -66,7 +69,7 @@ public class CameraTextureToShaderGraph : MonoBehaviour
 
         // Convert the image to format, flipping the image across the Y axis.
         // We can also get a sub rectangle, but we'll get the full image here.
-        var conversionParams = new CameraImageConversionParams(image, format, CameraImageTransformation.None);
+        var conversionParams = new XRCameraImageConversionParams(image, format, CameraImageTransformation.None);
 
         // Texture2D allows us write directly to the raw texture data
         // This allows us to do the conversion in-place without making any copies.

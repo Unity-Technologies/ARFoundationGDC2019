@@ -40,7 +40,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3851725568709526434}
   - component: {fileID: 3851725568709526435}
-  - component: {fileID: 3851725568709526433}
   m_Layer: 0
   m_Name: ShipManager
   m_TagString: Untagged
@@ -81,26 +80,13 @@ MonoBehaviour:
   rightBound: 10
   WorldResetBottom: 0
   WorldResetTop: 0
-  enemyShipPrefab: {fileID: 229890742257591014, guid: 2df047289a6ec41dc95c4092030b5397,
-    type: 3}
-  enemySpeed: 1
+  EnemyShip1: {fileID: 0}
   EnemyShip2: {fileID: 4975668564962253580, guid: 911e40ee1359a4e64ae0513f8f7d4c8c,
     type: 3}
   EnemyShip3: {fileID: 84402292738494239, guid: 939f56df9b50c4a518be8f71f0c21ec7,
     type: 3}
+  EnemyShip4: {fileID: 0}
+  EnemyShip5: {fileID: 0}
   enemyShipCount: 1000
-  enemyShipIncremement: 1
-  RootObject: {fileID: 3851725567750741354}
---- !u!114 &3851725568709526433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3851725568709526444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5e684665093b49ce8a8a85d0581abc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fpsText: {fileID: 0}
+  enemyShipIncrement: 1
+  m_RootObject: {fileID: 0}

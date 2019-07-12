@@ -10,6 +10,31 @@ using UnityEngine.XR.ARFoundation;
 [RequireComponent(typeof(Light))]
 public class LightEstimation : MonoBehaviour
 {
+    [SerializeField]
+    [Tooltip("The ARCameraManager which will produce frame events containing light estimation information.")]
+    ARCameraManager m_CameraManager;
+
+    /// <summary>
+    /// Get or set the <c>ARCameraManager</c>.
+    /// </summary>
+    public ARCameraManager cameraManager
+    {
+        get { return m_CameraManager; }
+        set
+        {
+            if (m_CameraManager == value)
+                return;
+
+            if (m_CameraManager != null)
+                m_CameraManager.frameReceived -= FrameChanged;
+
+            m_CameraManager = value;
+
+            if (m_CameraManager != null & enabled)
+                m_CameraManager.frameReceived += FrameChanged;
+        }
+    }
+
     /// <summary>
     /// The estimated brightness of the physical environment, if available.
     /// </summary>
@@ -25,10 +50,6 @@ public class LightEstimation : MonoBehaviour
     /// </summary>
     public Color? colorCorrection { get; private set; }
 
-    [SerializeField] int m_BrightnessMultiplier = 6;
-    [SerializeField] int m_ColorTempMultiplier = 2;
-    [SerializeField] int m_ColorCorrectionMultiplier = 2;
-
     void Awake ()
     {
         m_Light = GetComponent<Light>();
@@ -36,12 +57,14 @@ public class LightEstimation : MonoBehaviour
 
     void OnEnable()
     {
-        ARSubsystemManager.cameraFrameReceived += FrameChanged;
+        if (m_CameraManager != null)
+            m_CameraManager.frameReceived += FrameChanged;
     }
 
     void OnDisable()
     {
-        ARSubsystemManager.cameraFrameReceived -= FrameChanged;
+        if (m_CameraManager != null)
+            m_CameraManager.frameReceived -= FrameChanged;
     }
 
     void FrameChanged(ARCameraFrameEventArgs args)
@@ -49,19 +72,19 @@ public class LightEstimation : MonoBehaviour
         if (args.lightEstimation.averageBrightness.HasValue)
         {
             brightness = args.lightEstimation.averageBrightness.Value;
-            m_Light.intensity = (brightness.Value * m_BrightnessMultiplier);
+            m_Light.intensity = brightness.Value;
         }
 
         if (args.lightEstimation.averageColorTemperature.HasValue)
         {
             colorTemperature = args.lightEstimation.averageColorTemperature.Value;
-            m_Light.colorTemperature = (colorTemperature.Value * m_ColorTempMultiplier);
+            m_Light.colorTemperature = colorTemperature.Value;
         }
         
         if (args.lightEstimation.colorCorrection.HasValue)
         {
             colorCorrection = args.lightEstimation.colorCorrection.Value;
-            m_Light.color = (colorCorrection.Value * m_ColorCorrectionMultiplier);
+            m_Light.color = colorCorrection.Value;
         }
     }
 

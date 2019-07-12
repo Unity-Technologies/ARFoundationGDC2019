@@ -2,8 +2,8 @@
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.XR.ARExtensions;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
 
 [ExecuteAlways]
 public class ARShaderCameraTextureController : MonoBehaviour
@@ -16,22 +16,24 @@ public class ARShaderCameraTextureController : MonoBehaviour
 
     private int arCameraTextureColorID;
 
+    ARCameraManager m_CameraManager;
+
     void OnEnable()
     {
-        ARSubsystemManager.cameraFrameReceived += OnCameraFrameReceived;
+        m_CameraManager.frameReceived += OnCameraFrameReceived;
         arCameraTextureColorID = Shader.PropertyToID("_AR_CameraTextureColor");
     }
 
     void OnDisable()
     {
-        ARSubsystemManager.cameraFrameReceived -= OnCameraFrameReceived;
+        m_CameraManager.frameReceived -= OnCameraFrameReceived;
     }
 
     unsafe void OnCameraFrameReceived(ARCameraFrameEventArgs eventArgs)
     {
        
-        CameraImage image;
-        if (!ARSubsystemManager.cameraSubsystem.TryGetLatestImage(out image))
+        XRCameraImage image;
+        if (!m_CameraManager.TryGetLatestImage(out image))
             return;
 
        
@@ -41,7 +43,7 @@ public class ARShaderCameraTextureController : MonoBehaviour
             m_Texture = new Texture2D(image.width, image.height, format, false);
 
        
-        var conversionParams = new CameraImageConversionParams(image, format, CameraImageTransformation.None);
+        var conversionParams = new XRCameraImageConversionParams(image, format, CameraImageTransformation.None);
         conversionParams.outputDimensions = new Vector2Int(image.width/imageDownSampleFactor, image.height/imageDownSampleFactor);
 
       
