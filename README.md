@@ -6,6 +6,8 @@ It shows off AR Foundation, Lightweight render pipeline and the DOTS
 
 it is **ONLY** compatible with Unity **2018.3.5f**
 
+The project heavily relies on packages, which are now out of date with later versions of Unity. There are custom modification to the Lightweight render pipeline for things like the AR Shadows. 
+
 There are four buttons in the app with two showing at one time. In order to cycle between the buttons you can tap the screen with two fingers at the same time
 
 **Plant button : Toggle button**
