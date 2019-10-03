@@ -4,7 +4,7 @@ This demo was shown on at the game developers conference 2019
 
 It shows off AR Foundation, Lightweight render pipeline and the DOTS
 
-it is **ONLY** comptable with Unity **2018.3.5f**
+it is **ONLY** compatible with Unity **2018.3.5f**
 
 There are four buttons in the app with two showing at one time. In order to cycle between the buttons you can tap the screen with two fingers at the same time
 
